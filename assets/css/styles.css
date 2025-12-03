@@ -1540,8 +1540,12 @@ a:focus-visible {
 
 /* Card contenedor */
 .rh-exp-card {
-  background: transparent;
+  background: transparent !important;
   border-radius: 26px;
+  
+border-top-right-radius: 120px !important;
+
+  
   box-shadow: var(--shadow-soft);
   overflow: hidden;
   display: flex;
@@ -1554,10 +1558,12 @@ a:focus-visible {
   height: 230px;
   object-fit: cover;
   display: block;
+  
 
   /* mismo estilo que la sección Sitios del index */
   border-top-left-radius: 0;
-  border-top-right-radius: 45% 55px;
+  border-top-right-radius: 120px ;
+  
 }
 
 /* Cuerpo de la card */
@@ -1621,7 +1627,7 @@ a:focus-visible {
 .rh-anim {
   opacity: 0;
   transform: translateY(18px);
-  animation: rhFadeUp 0.7s ease-out forwards;
+  animation: rhFadeUp 0.9s ease-out forwards;
 }
 
 /* Pequeño “stagger” por orden */
