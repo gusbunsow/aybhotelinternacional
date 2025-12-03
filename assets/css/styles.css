@@ -31,9 +31,13 @@ body {
   line-height: 1.6;
   color: var(--ayb-text);
   background-color: var(--ayb-bg);
-  background-image: url("../img/vector.svg");
+  /*background-image: url("../img/vector.svg");*/
   background-repeat: repeat;
   background-size: 420px auto;
+  /*
+    background: linear-gradient(180deg, #DDE1CE 0%, #FAF6EE 100%);
+    background-attachment: fixed;
+  */
 }
 
 /*lo para texto accesible que NO se ve en pantalla */
@@ -795,13 +799,32 @@ a:focus-visible {
 
 .testimonial p:first-child {
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   margin-bottom: 0.35rem;
 }
 
 .testimonial-author {
-  font-size: 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
   color: #6b5c4e;
+  
+  display: flex;
+  justify-content: flex-end;   /* → alinea todo a la derecha */
+  align-items: center;         /* alinea verticalmente */
+  gap: 0.35rem;                /* espacio entre texto y icono */
+
+  margin-right: 50px;   /* ← Ajuste fino */
+}
+
+/* Icono pequeño del autor */
+.testimonial-author-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  opacity: 0.85;
+
+    margin-right: 50px;   /* ← Ajuste fino */
+
 }
 
 /* ====== TESTIMONIOS — NUEVO LAYOUT ====== */
@@ -949,6 +972,22 @@ a:focus-visible {
   width: 74px;
   margin-bottom: 0.4rem;
 }
+
+/* Línea de contacto: icono + texto en la misma fila */
+.contact-line {
+  display: flex;
+  align-items: center;   /* centra verticalmente icono y texto */
+  gap: 0.5rem;           /* espacio entre icono y texto */
+  margin: 0 0 0.35rem;
+}
+
+/* Iconos de teléfono y mail */
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;        /* evita que se achique si el texto es largo */
+}
+
 
 /* =========================
    CTA flotante / WhatsApp
@@ -1457,3 +1496,155 @@ a:focus-visible {
   }
 }
 
+/* =========================
+   SITIOS CERCA – layout
+   ========================= */
+
+.rh-experiencias {
+  padding: 3rem 0 3.5rem;
+}
+
+.rh-experiencias .rh-title {
+  font-size: 1.8rem;
+  margin: 0 0 0.4rem;
+  color: var(--ayb-green);
+}
+
+.rh-experiencias .rh-subtitle {
+  max-width: 48rem;
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: #645748;
+}
+
+/* Grid: 1 col en mobile, 2 en tablet, 3 en desktop */
+.rh-experiencias .row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .rh-experiencias .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .rh-experiencias .row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Card contenedor */
+.rh-exp-card {
+  background: transparent;
+  border-radius: 26px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen recortada tipo ventana vertical con curva */
+.rh-exp-card .card-img-top {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+
+  /* mismo estilo que la sección Sitios del index */
+  border-top-left-radius: 0;
+  border-top-right-radius: 45% 55px;
+}
+
+/* Cuerpo de la card */
+.rh-exp-card .card-body {
+  padding: 1rem 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.rh-exp-card .card-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  color: var(--ayb-green);
+}
+
+.rh-exp-card .card-title small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #8b7b70;
+}
+
+.rh-exp-card .card-text {
+  font-size: 0.9rem;
+  color: #4c4035;
+}
+
+/* Botón Ir */
+.btn-ir {
+  display: flex;                      /* el propio botón se comporta como flex */
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;                        /* ocupa todo el ancho disponible */
+  max-width: 260px;                   /* podés subirlo a 280 / 300 si lo querés más largo */
+  margin: 0.75rem auto 0;             /* lo centra dentro de la card */
+
+  padding: 0.65rem 1.4rem;            /* alto y “cuerpo” del botón */
+  border-radius: 999px;
+  border: none;
+  background: var(--ayb-green);
+  color: var(--ayb-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  transition: background-color 0.15s ease,
+              transform 0.15s ease,
+              box-shadow 0.15s ease;
+}
+
+.btn-ir:hover {
+  background: var(--ayb-orange-active);
+  transform: translateY(1px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+/* Animación de entrada */
+.rh-anim {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: rhFadeUp 0.7s ease-out forwards;
+}
+
+/* Pequeño “stagger” por orden */
+.rh-experiencias .rh-anim:nth-of-type(2) { animation-delay: 0.06s; }
+.rh-experiencias .rh-anim:nth-of-type(3) { animation-delay: 0.12s; }
+.rh-experiencias .rh-anim:nth-of-type(4) { animation-delay: 0.18s; }
+.rh-experiencias .rh-anim:nth-of-type(5) { animation-delay: 0.24s; }
+.rh-experiencias .rh-anim:nth-of-type(6) { animation-delay: 0.30s; }
+.rh-experiencias .rh-anim:nth-of-type(7) { animation-delay: 0.36s; }
+.rh-experiencias .rh-anim:nth-of-type(8) { animation-delay: 0.42s; }
+
+@keyframes rhFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   FIN -- SITIOS CERCA – layout
+   ========================= */
