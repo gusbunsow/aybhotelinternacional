@@ -56,74 +56,93 @@
 <body>
   <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
 
-  <!-- HERO + HEADER -->
-  <header class="site-header" id="inicio">
-    <div class="hero">
-      <div class="hero-media" aria-hidden="true"></div>
+ <!-- HERO + HEADER -->
+<header class="site-header" id="inicio">
+  <div class="hero">
+    <div class="hero-media" aria-hidden="true"></div>
 
-      <div class="hero-inner container">
-        <!-- Header flotante -->
-        <div class="header-card">
-  <a href="#inicio" class="logo-link">
-    <img src="assets/img/ayblogohorizontal.svg" alt="Hotel AyB Internacional" class="logo-img">
-  </a>
+    <div class="hero-inner container">
+      <!-- Header flotante -->
+      <div class="header-card">
+        <a href="#inicio" class="logo-link">
+          <img src="assets/img/ayblogohorizontal.svg" alt="Hotel AyB Internacional" class="logo-img">
+        </a>
 
-  <!-- Botón hamburguesa SOLO para móvil -->
-  <button class="nav-toggle" aria-controls="menu-principal" aria-expanded="false">
-    <img src="assets/img/vector-hamburguesa.svg"
-         alt="Abrir menú"
-         class="icon-menu icon-menu-open">
-    <img src="assets/img/vector-close.svg"
-         alt="Cerrar menú"
-         class="icon-menu icon-menu-close">
-    <span class="sr-only">Abrir o cerrar menú principal</span>
-  </button>
+        <!-- Botón hamburguesa SOLO para móvil -->
+        <button class="nav-toggle" aria-controls="menu-principal" aria-expanded="false">
+          <img src="assets/img/vector-hamburguesa.svg"
+               alt="Abrir menú"
+               class="icon-menu icon-menu-open">
+          <img src="assets/img/vector-close.svg"
+               alt="Cerrar menú"
+               class="icon-menu icon-menu-close">
+          <span class="sr-only">Abrir o cerrar menú principal</span>
+        </button>
 
-  <nav class="nav" id="menu-principal" aria-label="Navegación principal">
-    <ul>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#habitaciones">Habitaciones</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#sitios">Sitios</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+        <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+          <ul>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#habitaciones">Habitaciones</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="sitios.html">Sitios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
 
-      <!-- Idiomas dentro del nav -->
-      <li class="nav-lang">
-        <a href="/index.html" class="lang active">ES</a>
-        <span class="lang-sep">·</span>
-        <a href="/en/index.html" class="lang">EN</a>
-        <span class="lang-sep">·</span>
-        <a href="/pt/index.html" class="lang">PT</a>
-      </li>
+            <!-- Idiomas dentro del nav -->
+            <li class="nav-lang">
+              <a href="/index.html" class="lang active">ES</a>
+              <span class="lang-sep">·</span>
+              <a href="/en/index.html" class="lang">EN</a>
+              <span class="lang-sep">·</span>
+              <a href="/pt/index.html" class="lang">PT</a>
+            </li>
 
-      <li><a href="#reservar" class="nav-cta">Reservar</a></li>
-    </ul>
-  </nav>
-</div>
-
-
-        <!-- Texto hero -->
-        <div class="hero-text">
-          <!--<p class="hero-kicker">Hotel AyB Internacional · San Nicolás</p>-->
-          <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit imperdiet.</h1>
-          <p class="hero-subtitle">
-             Etiam non primis et fermentum nullam suscipit habitant cubilia, taciti per neque molestie interdum quisque felis.
-          </p>
-          <div class="hero-actions">
-            <!-- <a href="#reservar" class="btn btn-primary">Reservar ahora</a>-->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScvx_XB2Dar2wKDvwczaOnd21n3Pr3aBOan2nrH8JB_G9qWlQ/viewform" class="btn btn-ghost">Check-In Online</a>
-          </div>
-        </div>
+            <li><a href="#reservar" class="nav-cta">Reservar</a></li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="hero-curve" aria-hidden="true"></div>
+      <!-- En lugar del texto de la hero va el motor -->
+      <div class="hero-text hero-text--booking">
+        <section class="booking booking-in-hero" aria-label="Motor de reservas">
+          <div class="booking-card">
+            <form action="#" method="get" class="booking-form" id="reservar">
+              <div class="booking-field">
+                <label for="checkin">Check-in</label>
+                <input type="date" id="checkin" name="checkin">
+              </div>
+              <div class="booking-field">
+                <label for="checkout">Check-out</label>
+                <input type="date" id="checkout" name="checkout">
+              </div>
+              <div class="booking-field booking-field-inline">
+                <label for="adultos">Adultos</label>
+                <input type="number" id="adultos" name="adultos" min="1" value="2">
+              </div>
+              <div class="booking-field booking-field-inline">
+                <label for="ninos">Niños</label>
+                <input type="number" id="ninos" name="ninos" min="0" value="0">
+              </div>
+              <div class="booking-actions">
+                <button type="submit" class="btn btn-primary btn-full">
+                  Reservar ahora
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
     </div>
-  </header>
+
+    <div class="hero-curve" aria-hidden="true"></div>
+  </div>
+</header>
+
  <div>
   
  </div>
-  <!-- MOTOR DE BÚSQUEDA (placeholder) -->
+
+  <!-- MOTOR DE BÚSQUEDA (placeholder) 
   <section class="booking" aria-label="Motor de reservas">
     <div class="container booking-card">
       <form action="#" method="get" class="booking-form" id="reservar">
@@ -149,18 +168,307 @@
       </form>
     </div>
   </section>
+-->
+
+<main class="suite-main">
+
+  <!-- INTRO + GALERÍA -->
+  <section class="section suite-intro">
+    <div class="container suite-intro-grid">
+
+      <!-- Texto principal -->
+      <div class="suite-intro-text">
+        <h1 class="suite-title">Suite con Jacuzzi</h1>
+
+        <p class="suite-lead">
+          Hotel AyB Internacional le ofrece cómodas habitaciones con Jacuzzi.
+        </p>
+
+        <p class="suite-body">
+          Todas nuestras habitaciones están totalmente equipadas con cofre de seguridad, minibar,
+          aire acondicionado / calefacción central, baño privado con secador de pelo, teléfono,
+          TV color por cable, Internet Wi-Fi, ventanas con doble vidrio y cortinas blackout.
+        </p>
+
+        <p class="suite-note">
+          Espacios amplios, luz natural y detalles cuidados para que tu estadía en el centro porteño
+          se sienta como un descanso real, ya sea que viajes por trabajo o por placer.
+        </p>
+
+        <a href="#reservar" class="btn btn-primary suite-cta">
+          Reservar ahora
+        </a>
+      </div>
+
+            <!-- Galería -->
+<div class="suite-gallery">
+  <div class="suite-carousel">
+
+    <!-- Flecha izquierda -->
+    <button class="suite-carousel-arrow suite-carousel-arrow--prev" aria-label="Foto anterior">
+      ‹
+    </button>
+
+    <!-- Ventana del carrusel -->
+    <div class="suite-carousel-viewport">
+      <div class="suite-carousel-track">
+        <figure class="suite-photo is-active">
+          <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Suite con Jacuzzi - vista general">
+        </figure>
+        <figure class="suite-photo">
+          <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Suite con Jacuzzi - detalle de Jacuzzi">
+        </figure>
+        <figure class="suite-photo">
+          <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Suite con Jacuzzi - sector de descanso">
+        </figure>
+        <figure class="suite-photo">
+          <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Suite con Jacuzzi - iluminación cálida">
+        </figure>
+        <figure class="suite-photo">
+          <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Suite con Jacuzzi - amenities de baño">
+        </figure>
+        <figure class="suite-photo">
+          <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Suite con Jacuzzi - detalle de cama">
+        </figure>
+      </div>
+    </div>
+
+    <!-- Flecha derecha -->
+    <button class="suite-carousel-arrow suite-carousel-arrow--next" aria-label="Foto siguiente">
+      ›
+    </button>
+
+    <!-- Dots (se usan sobre todo en mobile) -->
+    <div class="suite-carousel-dots">
+      <button class="suite-dot is-active" aria-label="Ir a la foto 1"></button>
+      <button class="suite-dot" aria-label="Ir a la foto 2"></button>
+      <button class="suite-dot" aria-label="Ir a la foto 3"></button>
+      <button class="suite-dot" aria-label="Ir a la foto 4"></button>
+      <button class="suite-dot" aria-label="Ir a la foto 5"></button>
+      <button class="suite-dot" aria-label="Ir a la foto 6"></button>
+    </div>
+
+    <!-- Miniaturas (se muestran en desktop, ocultas en mobile) -->
+    <div class="suite-carousel-thumbs">
+      <button class="suite-thumb is-active" aria-label="Ir a la foto 1">
+        <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Vista general">
+      </button>
+      <button class="suite-thumb" aria-label="Ir a la foto 2">
+        <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Detalle de Jacuzzi">
+      </button>
+      <button class="suite-thumb" aria-label="Ir a la foto 3">
+        <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Sector de descanso">
+      </button>
+      <button class="suite-thumb" aria-label="Ir a la foto 4">
+        <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Iluminación cálida">
+      </button>
+      <button class="suite-thumb" aria-label="Ir a la foto 5">
+        <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Amenities de baño">
+      </button>
+      <button class="suite-thumb" aria-label="Ir a la foto 6">
+        <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Detalle de cama">
+      </button>
+    </div>
+
+  </div>
+</div>
 
 
+          <!-- Flecha derecha -->
+          <button class="suite-carousel-arrow suite-carousel-arrow--next" aria-label="Foto siguiente">
+            ›
+          </button>
+
+          <!-- Puntos de navegación -->
+          <div class="suite-carousel-dots">
+            <button class="suite-dot is-active" aria-label="Ir a la foto 1"></button>
+            <button class="suite-dot" aria-label="Ir a la foto 2"></button>
+            <button class="suite-dot" aria-label="Ir a la foto 3"></button>
+            <button class="suite-dot" aria-label="Ir a la foto 4"></button>
+            <button class="suite-dot" aria-label="Ir a la foto 5"></button>
+            <button class="suite-dot" aria-label="Ir a la foto 6"></button>
+          </div>
+        </div>
+      </div>
 
 
+    </div>
+  </section>
 
+  <!-- SERVICIOS DE LA SUITE -->
+  <section class="section suite-services">
+    <div class="container">
+      <header class="section-header">
+        <h2>Servicios en la Suite con Jacuzzi</h2>
+        <p class="suite-services-intro">
+          Todo lo que necesitás para descansar, trabajar y disfrutar sin preocuparte por nada.
+        </p>
+      </header>
 
+      <ul class="suite-services-list">
 
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Artículos de aseo gratuitos</span>
+        </li>
 
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Sommiers</span>
+        </li>
 
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Sofá</span>
+        </li>
 
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Servicio de despertador</span>
+        </li>
 
-  <!-- BOTÓN WHATSAPP + CTA RESERVA -->
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Secador de cabello</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Nevera / minibar</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>LCD TV pantalla plana</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Internet Wi-Fi sin cargo</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Espuma para baño</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Equipo de planchado (a pedido)</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Ducha y bañera de hidromasaje para 2 personas</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Canales por cable</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Calefacción</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Caja de seguridad digital</span>
+        </li>
+
+        <li>
+          <span class="suite-service-icon">
+            <img src="assets/img/wifi.svg" alt="" loading="lazy">
+          </span>
+          <span>Teléfono</span>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- OTRAS HABITACIONES -->
+  <section class="section suite-other-rooms">
+    <div class="container">
+      <header class="section-header">
+        <h2>Otras habitaciones</h2>
+        <p>Elegí la categoría que mejor se adapta a tu estadía.</p>
+      </header>
+
+      <div class="suite-rooms-grid">
+
+        <!-- Doble -->
+        <article class="suite-room-card">
+          <div class="suite-room-media">
+            <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Habitación Doble">
+          </div>
+          <div class="suite-room-body">
+            <h3>Habitación Doble</h3>
+            <p>Ideal para dos personas, con cama matrimonial o twin, climatización y todos los servicios esenciales.</p>
+            <a href="doble.html" class="suite-room-link">Ver habitación</a>
+          </div>
+        </article>
+
+        <!-- Triple -->
+        <article class="suite-room-card">
+          <div class="suite-room-media">
+            <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Habitación Triple">
+          </div>
+          <div class="suite-room-body">
+            <h3>Habitación Triple</h3>
+            <p>Una opción cómoda para familias pequeñas o grupos de amigos, con distribución flexible de camas.</p>
+            <a href="triple.html" class="suite-room-link">Ver habitación</a>
+          </div>
+        </article>
+
+        <!-- Cuádruple -->
+        <article class="suite-room-card">
+          <div class="suite-room-media">
+            <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Habitación Cuádruple">
+          </div>
+          <div class="suite-room-body">
+            <h3>Habitación Cuádruple</h3>
+            <p>Más metros cuadrados para compartir en grupo, manteniendo la calidez y el confort del hotel.</p>
+            <a href="cuadruple.html" class="suite-room-link">Ver habitación</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- BOTÓN WHATSAPP + CTA RESERVA -->
   <div class="floating-cta">
     <a href="#reservar" class="btn btn-primary">Reservar ahora</a>
     <a
@@ -316,6 +624,91 @@ startAutoScroll();
 carousel.addEventListener("mouseenter", stopAutoScroll);
 carousel.addEventListener("mouseleave", startAutoScroll);
 </script>
+
+<!--SCRIPT CARROUSEL-->
+<script>
+  (function () {
+    const track = document.querySelector('.suite-carousel-track');
+    const slides = Array.from(document.querySelectorAll('.suite-photo'));
+    const prevBtn = document.querySelector('.suite-carousel-arrow--prev');
+    const nextBtn = document.querySelector('.suite-carousel-arrow--next');
+    const dots = Array.from(document.querySelectorAll('.suite-dot'));
+    const thumbs = Array.from(document.querySelectorAll('.suite-thumb'));
+
+    if (!track || !slides.length) return;
+
+    let currentIndex = 0;
+    const total = slides.length;
+
+    function goToSlide(index) {
+      currentIndex = (index + total) % total;
+
+      const offset = -currentIndex * 100;
+      track.style.transform = `translateX(${offset}%)`;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('is-active', i === currentIndex);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === currentIndex);
+      });
+
+      thumbs.forEach((thumb, i) => {
+        thumb.classList.toggle('is-active', i === currentIndex);
+      });
+    }
+
+    // Flechas
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+      });
+    }
+
+    // Dots
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        goToSlide(i);
+      });
+    });
+
+    // Miniaturas
+    thumbs.forEach((thumb, i) => {
+      thumb.addEventListener('click', () => {
+        goToSlide(i);
+      });
+    });
+
+    // (Opcional) autoplay suave
+
+    let autoTimer = setInterval(() => {
+      goToSlide(currentIndex + 1);
+    }, 7000);
+
+    [...dots, ...thumbs, prevBtn, nextBtn].forEach(el => {
+      if (!el) return;
+      el.addEventListener('click', () => {
+        clearInterval(autoTimer);
+        autoTimer = setInterval(() => {
+          goToSlide(currentIndex + 1);
+        }, 7000);
+      });
+    });
+
+
+    goToSlide(0);
+  })();
+</script>
+
+<!--FIN SCRIPT CARROUSEL-->
+
 
 </body>
 </html>

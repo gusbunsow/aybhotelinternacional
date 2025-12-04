@@ -1,17 +1,29 @@
 /* =========================
-   Variables y base
+   Tema Nocturno (modo noche)
+   ========================= */
+/* =========================
+   Variables y base · MODO NOCHE
    ========================= */
 :root {
-  --ayb-green: #074F4D;
-  --ayb-orange: #FE4500;
-  --ayb-orange-active: #FF6D36;
-  --ayb-bg: #FAF3EA;
-  --ayb-white: #FFFFFF;
-  --ayb-text: #222222;
-  --ayb-soft: #F4E6D7;
+  /* Colores de marca adaptados a fondo oscuro */
+  --ayb-green: #1C807A;          /* verde más luminoso sobre oscuro */
+  --ayb-orange: #FF7A3A;         /* naranja cálido visible */
+  --ayb-orange-active: #FF9B64;
+
+  /* Fondos */
+  --ayb-bg: #101416;             /* fondo general oscuro */
+  --ayb-white: #1B2326;          /* “blanco” para cards/paneles */
+  --ayb-soft: #171F22;           /* fondos suaves (secciones) */
+
+  /* Texto */
+  --ayb-text: #F5EEE4;           /* texto principal muy claro, cálido */
+
+  /* Radius y sombra mantienen el estilo pero más profunda */
   --radius-card: 18px;
-  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.16);
+  --shadow-soft: 0 26px 60px rgba(0, 0, 0, 0.72);
 }
+
+
 
 *,
 *::before,
@@ -2090,4 +2102,106 @@ border-top-right-radius: 120px !important;
   .booking-card {
     box-shadow: 0 24px 56px rgba(0, 0, 0, 0.20);
   }
+}
+
+
+.hero-text h1,
+.hero-text p,
+.hero-text .hero-subtitle {
+  color: #FFFFFF !important;
+}
+.btn-ghost {
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+.btn-ghost:hover {
+  color: #111 !important;      /* si querés inversión al pasar el mouse */
+  background: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+.booking-card {
+  background: rgb(192, 192, 192) !important; /* blanco suave + transparente */
+  backdrop-filter: blur(6px);                       /* opcional: efecto vidrio */
+}
+/* Sección Nuestras habitaciones → textos en blanco */
+.section-rooms .section-header h2,
+.section-rooms .section-header p {
+  color: #FFFFFF !important;
+}
+.suite-services .suite-service-icon img {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(79%) saturate(2569%) hue-rotate(358deg) brightness(102%) contrast(99%);
+}
+.section-rooms .room-caption .room-arrow {
+  color: var(--ayb-orange) !important;
+}
+/* Sección completa en verde oscuro */
+.section-rooms {
+  background: #003B39 !important;   /* verde oscuro AyB */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Títulos y subtítulos en blanco */
+.section-rooms .section-header h2,
+.section-rooms .section-header p {
+  color: #FFFFFF !important;
+}
+
+/* Flechas y títulos dentro del carrusel */
+.section-rooms .room-caption,
+.section-rooms .room-title,
+.section-rooms .room-arrow {
+  color: #FFFFFF !important;
+}
+/* Tarjetas de SERVICIOS con fondo cremita */
+.suite-services-list li {
+  background: #E9E3D8;        /* cremita */
+  border-radius: 16px;
+  padding: 0.75rem 1rem;
+}
+
+/* Texto sobre el cremita en verde oscuro */
+.suite-services-list li span,
+.suite-services-list li p {
+  color: #003B39;
+}
+
+/* Ícono: círculo sin color de fondo, que se vea el verde del SVG */
+.suite-service-icon {
+  background: transparent;
+}
+/* SERVICIOS · tarjetas claras para que se vea el SVG verde */
+.suite-services-list li {
+  background: #E9E3D8 !important;   /* cremita */
+  border-radius: 16px !important;
+  padding: 0.75rem 1rem !important;
+}
+
+/* texto dentro de cada item en verde oscuro legible */
+.suite-services-list li,
+.suite-services-list li * {
+  color: #003B39 !important;
+}
+
+/* circulito del icono sin fondo, que destaque solo el SVG verde */
+.suite-service-icon {
+  background: transparent !important;
+}
+/* Footer: textos en blanco */
+footer,
+.site-footer {
+  color: #FFFFFF !important;
+}
+
+/* Links del footer también blancos */
+footer a,
+.site-footer a {
+  color: #FFFFFF !important;
+}
+
+/* Textos pequeños, spans, etc. */
+footer * ,
+.site-footer * {
+  color: #FFFFFF !important;
 }
