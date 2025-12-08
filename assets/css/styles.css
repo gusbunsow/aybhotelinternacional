@@ -1,6 +1,18 @@
 /* =========================
    Variables y base
    ========================= */
+
+
+@font-face {
+  font-family: "FS Siena";
+  src: url("../fonts/FS_Siena_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 :root {
   --ayb-green: #074F4D;
   --ayb-orange: #FE4500;
@@ -114,8 +126,8 @@ a:focus-visible {
   position: absolute;
   inset: 0;                  /* top:0; right:0; bottom:0; left:0; */
   background-image:
-    linear-gradient(to bottom, rgba(7,79,77,0.55), rgba(7,79,77,0.92)),
-    url("../img/suiteconjacuzzi-1-1600.webp");   /* o .jpg si preferís */
+    linear-gradient(to bottom, rgba(99, 107, 107, 0.55), rgba(35, 37, 37, 0.92)),
+    url("../img/DSCN3570-1-e1590789510582.jpg");   /* o .jpg si preferís */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -134,7 +146,7 @@ a:focus-visible {
   padding: 9rem 1.2rem 4.5rem;
 }
 
-/* Header flotante + fijo en scroll */
+/* Header flotante + fijo en scroll 
 .header-card {
   position: fixed;
   top: 1.2rem;
@@ -152,7 +164,37 @@ a:focus-visible {
   backdrop-filter: blur(8px);
   width: calc(100% - 2.4rem);
   max-width: 680px;
+}*/
+
+/* Header flotante + fijo en scroll */
+.header-card {
+  position: fixed;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* INICIO: transparente / glass */
+  background: transparent;    /* casi transparente */
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem 0.55rem 0.7rem;
+  /*box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);*/
+  /*backdrop-filter: blur(10px);*/
+
+  width: calc(100% - 2.4rem);
+  max-width: 680px;
 }
+
+/* AL SCROLL: se tiñe de verde */
+.site-header.header-solid .header-card {
+  background: var(--ayb-green);
+  backdrop-filter: none;                 /* opcional: sacás el efecto glass */
+}
+
 
 .logo-img {
   height: 28px;
@@ -375,7 +417,7 @@ a:focus-visible {
   right: 0;
   bottom: -1px;
   height: 70px;
-  background: var(--ayb-bg);
+  background:  var(--ayb-green);
   border-top-left-radius: 50% 70px;
   border-top-right-radius: 50% 70px;
   box-shadow: 0 -12px 25px rgba(0, 0, 0, 0.26);
@@ -758,6 +800,7 @@ a:focus-visible {
   font-weight: 600;
   display: inline-flex;
   align-items: center;
+  margin-left: 30px; 
   justify-content: center;
   text-decoration: none;
 }
@@ -772,7 +815,8 @@ a:focus-visible {
    TESTIMONIOS
    ========================= */
 .section-testimonials {
-  background: rgba(7, 79, 77, 0.06);
+  background:  #074F4D;
+  padding: 4.5rem 1.2rem;
 }
 
 .testimonials-wrapper {
@@ -806,7 +850,7 @@ a:focus-visible {
 .testimonial-author {
   font-size: 1rem;
   font-weight: 600;
-  color: #6b5c4e;
+  color: #ffffff;
   
   display: flex;
   justify-content: flex-end;   /* → alinea todo a la derecha */
@@ -878,6 +922,28 @@ a:focus-visible {
     max-width: 160px;
     height: auto;
   }
+}
+
+/* Título y textos blancos */
+.section-testimonials h2,
+.section-testimonials p,
+.section-testimonials .testimonial-text,
+.section-testimonials .testimonial-author,
+.section-testimonials .testimonial-role {
+  color: #FAF3EA !important;  /* blanco-cremita de tu paleta */
+}
+
+/* Si hay cards con fondo, mantenelas claras */
+.section-testimonials .testimonial-card {
+  background: rgba(255,255,255,0.10);  /* leve transparencia si te gusta */
+  border-radius: 18px;
+  padding: 1.6rem;
+  backdrop-filter: blur(6px);
+}
+
+/* Ajuste opcional: sombras suaves */
+.section-testimonials .testimonial-card {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 
@@ -2090,4 +2156,366 @@ border-top-right-radius: 120px !important;
   .booking-card {
     box-shadow: 0 24px 56px rgba(0, 0, 0, 0.20);
   }
+}
+
+/* BOTON VER HABITACIONES */
+
+
+.rooms-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-view-rooms {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  background: var(--ayb-green);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 28px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.btn-view-rooms:hover {
+  background: var(--ayb-orange-active);
+  transform: translateY(-2px);
+}
+
+/*FONDO DE COLOR*/
+
+body {
+  background: linear-gradient(135deg, #04847B 0%, #074F4D 100%);
+  background-attachment: fixed;
+}
+
+/* NUEVO TEXTO HEADER*/
+/* Centrar contenido del héroe */
+.hero-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Animación caída desde arriba */
+.hero-text {
+  opacity: 0;
+  transform: translateY(-40px);   /* empieza arriba */
+  animation: heroDropIn 1s ease-out forwards;
+  animation-delay: 0.25s;
+}
+
+@keyframes heroDropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Control de distancia respecto del header */
+.hero-text {
+  margin-top: 3.5rem;   /* AJUSTÁ ESTE VALOR a tu gusto */
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Layout de la sección Nosotros */
+.nosotros-grid {
+  display: grid;
+  gap: 2.8rem;
+  align-items: center;
+}
+
+/* Título y texto en cremita */
+#nosotros .nosotros-hotel-name h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 200;               /* finito, elegante */
+  color: #FAF3EA;
+  letter-spacing: 0.2px;          /* leve mejora para títulos finos */
+  font-size: 3.4rem;              /* ajuste suave del tamaño */
+  line-height: 1.05;              /* menos separación entre líneas */
+  margin-bottom: 0.7rem;
+  max-width: 540px;
+  margin-left: 30px;   /* ↞ ajustá este valor */
+}
+
+
+/* PÁRRAFO */
+#nosotros .nosotros-text {
+  color: #FAF3EA;
+  font-size: 1.25rem;      /* ~30% más grande */
+  font-weight: 200;
+  line-height: 1.35;       /* más compacto y elegante */
+  max-width: 540px;        /* controla la longitud del texto */
+  margin-left: 30px;       /* MISMA tabulación que el título */
+  margin-top: 0.5rem;
+}
+
+/* Imagen derecha con curva más marcada y opuesta + sombra clara */
+.nosotros-media img {
+  width: 100%;
+  display: block;
+  border-radius: 0 32px 0 32px;   /* sup derecha + inf derecha más pronunciadas */
+  object-fit: cover;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.36); /* sombra suave para despegar del fondo */
+  margin-left: -30px;
+}
+
+/* Dos columnas en desktop */
+@media (min-width: 768px) {
+  .nosotros-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+}
+
+/* Animación de entrada tipo hero (texto + imagen) */
+.nosotros-hotel-name,
+.nosotros-media {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: nosotrosFadeUp 0.95s ease-out forwards;
+}
+
+.nosotros-media {
+  animation-delay: 0.18s; /* entra un poquito después del texto */
+}
+
+@keyframes nosotrosFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BACK Korona*/
+.corona-bg {
+  position: fixed;      /* queda como capa flotante, independiente */
+  bottom: -100px;       /* mueve para que solo se vea la mitad */
+  right: -2000px;
+  width: 4000px;         /* tamaño gigante */
+  height: 1100px;
+
+  background-image: url("../img/iso_AyB_corona_blanco_1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  opacity: 0.15;        /* suave para no competir con textos */
+  filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.75)); /* glow neón */
+
+  pointer-events: none; /* NO tapa botones ni texto */
+  z-index: 0;           /* debajo de todo */
+}
+
+/* HALO radial glow detrás */
+.corona-bg::after {
+  content: "";
+  position: absolute;
+  inset: -150px;      /* halo más grande que el SVG */
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.40) 0%,
+    rgba(255,255,255,0.20) 35%,
+    rgba(255,255,255,0.05) 70%,
+    rgba(255,255,255,0) 100%
+  );
+  filter: blur(70px);
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* ===== Nuestras habitaciones — título y subtítulo ===== */
+.section-rooms .section-header {
+  text-align: center;        /* CENTRA TODO */
+  color: #FFFFFF;            /* TEXTO BLANCO */
+}
+
+.section-rooms .section-header h2 {
+  color: #FFFFFF;            /* por si tenía override */
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.section-rooms .section-header p {
+  color: #FFFFFF;
+  opacity: 1.5;              /* opcional para suavizar */
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+
+/* ===== Sitios de interés — alineado con sección Nosotros ===== */
+
+.section-sitios {
+  padding: 4rem 1.2rem 4.5rem;
+}
+
+.section-sitios .container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Título */
+.section-sitios h2 {
+  color: #FAF3EA;          /* cremita */
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin-left: 30px;       /* misma tabulación que Nosotros */
+  margin-bottom: 0.8rem;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: sitiosFadeUp 0.9s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+/* Párrafo */
+.section-sitios p {
+  color: #FAF3EA;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  max-width: 620px;
+  margin-left: 30px;       /* misma tabulación */
+  margin-top: 0.2rem;
+
+  opacity: 0;
+  transform: translateY(24px);
+  animation: sitiosFadeUp 0.9s ease-out forwards;
+  animation-delay: 0.25s;  /* entra un poquito después del título */
+}
+
+/* Animación compartida */
+@keyframes sitiosFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================
+   SECCIÓN: CÓMO LLEGAR
+   ============================= */
+
+.section-map {
+  padding: 5.5rem 1.4rem 6rem;
+  text-align: center;
+}
+
+/* Bloque de título + texto */
+.section-map .map-header {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+
+/* Título */
+.section-map .map-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FAF3EA;
+  margin-bottom: 0.8rem;
+}
+
+/* Texto */
+.section-map .map-header p {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #FAF3EA;
+  margin: 0;
+}
+
+/* Contenedor que centra el mapa */
+.section-map .map-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Caja del mapa */
+.section-map .map-embed {
+  width: 100%;
+  max-width: 980px;          /* ANCHO MÁXIMO DEL MAPA */
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* Iframe del mapa */
+.section-map .map-embed iframe {
+  width: 100%;
+  height: 740px;             /* ALTURA DEL MAPA */
+  border: 0;
+  display: block;
+}
+
+/* =============================
+   ANIMACIÓN DE ENTRADA
+   ============================= */
+
+/* Estado inicial */
+.section-map .map-header h2,
+.section-map .map-header p,
+.section-map .map-embed {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: mapFadeUp 0.85s ease-out forwards;
+}
+
+/* Delays escalonados */
+.section-map .map-header h2 { animation-delay: 0.05s; }
+.section-map .map-header p  { animation-delay: 0.18s; }
+.section-map .map-embed     { animation-delay: 0.32s; }
+
+/* Keyframes compartidos */
+@keyframes mapFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-contact {
+  background: #083B3A;   /* ejemplo: verde oscuro, cambiá por el color que quieras */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  opacity: 1;
+}
+
+/* Título “Contacto” en cremita clara */
+.section-contact .section-header h2 {
+  color: #FAF3EA;           /* cremita clara que venís usando */
+  text-align: left;
+}
+
+/* Subtítulo en blanco */
+.section-contact .section-header p {
+  color: #FFFFFF;           /* blanco pleno */
+  text-align: left;
+}
+
+.section-contact .contact-info h3 {
+  color: var(--ayb-orange);   /* tu naranja institucional */
+  font-weight: 700;           /* bold */
+}
+.section-contact .contact-info p,
+.section-contact .contact-info a {
+  color: #FFFFFF !important;   /* blanco pleno */
+}
+.section-contact {
+  position: relative;
+  background: #074F4D !important;   /* verde pleno */
+  z-index: 5;
+}
+
+.section-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #074F4D;              /* sin transparencia */
+  z-index: -1;                      /* queda detrás del contenido */
 }

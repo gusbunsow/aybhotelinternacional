@@ -54,6 +54,8 @@
   </script>
 </head>
 <body>
+  <div class="corona-bg"></div>
+
   <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
 
   <!-- HERO + HEADER -->
@@ -107,13 +109,14 @@
         <div class="hero-text">
           <!--<p class="hero-kicker">Hotel AyB Internacional · San Nicolás</p>-->
           <h1>Tradición porteña y vida cultural, en un mismo lugar.</h1>
-          <p class="hero-subtitle">
+          <!--<p class="hero-subtitle">
             Símbolos porteños, corazones abiertos. Hospedate a pasos de los teatros, cafés y bares notables de Buenos Aires.
           </p>
           <div class="hero-actions">
-            <!-- <a href="#reservar" class="btn btn-primary">Reservar ahora</a>-->
+             <a href="#reservar" class="btn btn-primary">Reservar ahora</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScvx_XB2Dar2wKDvwczaOnd21n3Pr3aBOan2nrH8JB_G9qWlQ/viewform" class="btn btn-ghost">Check-In Online</a>
           </div>
+          -->
         </div>
       </div>
 
@@ -152,15 +155,27 @@
 
   <main id="contenido-principal">
     <!-- NOSOTROS -->
-    <section class="section section-intro" id="nosotros">
-      <div class="container">
-        <h2>Hotel con alma porteña</h2>
-        <p>
-          En AyB Internacional combinamos historia y vida cultural. Nuestro edificio de época, nuestros detalles
-          artesanales y la calidez del equipo hacen que cada estadía se sienta como volver a casa.
-        </p>
-      </div>
-    </section>
+<section class="section section-intro" id="nosotros">
+  <div class="container nosotros-grid">
+    
+    <!-- Texto -->
+    <div class="nosotros-hotel-name">
+      <h1>AyB Hotel Internacional</h1>
+      <p class="nosotros-text">
+  Lleva más de 25 años recibiendo pasajeros que buscan algo más que una estadía:
+  una experiencia porteña genuina.
+</p>
+
+    </div>
+
+    <!-- Imagen derecha -->
+    <div class="nosotros-media">
+      <img src="assets/img/DSCN3574-e1590789557208.jpg" alt="Espacio del Hotel AyB Internacional">
+    </div>
+
+  </div>
+</section>
+
 
 <!-- HABITACIONES -->
 <section class="section section-rooms" id="habitaciones">
@@ -176,7 +191,7 @@
       <article class="room-card">
         <a href="suite-con-jacuzzi.html" class="room-card-link">
           <figure class="room-media">
-            <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Suite con Jacuzzi">
+            <img src="assets/img/Hab.-Suite.-Jacuzzi-2-e1590790052510-1000x1000.jpg" alt="Suite con Jacuzzi">
             <figcaption class="room-caption">
               <span class="room-title">Suite con Jacuzzi</span>
               <span class="room-arrow">→</span>
@@ -189,7 +204,7 @@
       <article class="room-card">
         <a href="habitacion-doble.html" class="room-card-link">
           <figure class="room-media">
-            <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Habitación Doble">
+            <img src="assets/img/Hab.-Dbl.-Std-3-e1590790401308-1000x1000.jpg" alt="Habitación Doble">
             <figcaption class="room-caption">
               <span class="room-title">Doble</span>
               <span class="room-arrow">→</span>
@@ -202,7 +217,7 @@
       <article class="room-card">
         <a href="habitacion-triple.html" class="room-card-link">
           <figure class="room-media">
-            <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Habitación Triple">
+            <img src="assets/img/Hab.-Tpl.-Std-4-e1590790315733-1000x1000.jpg" alt="Habitación Triple">
             <figcaption class="room-caption">
               <span class="room-title">Triple</span>
               <span class="room-arrow">→</span>
@@ -215,7 +230,7 @@
       <article class="room-card">
         <a href="habitacion-cuadruple.html" class="room-card-link">
           <figure class="room-media">
-            <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Habitación Cuádruple">
+            <img src="assets/img/IMG_20160803_164611-e1590790203281-1000x1000.jpg" alt="Habitación Cuádruple">
             <figcaption class="room-caption">
               <span class="room-title">Cuádruple</span>
               <span class="room-arrow">→</span>
@@ -228,7 +243,7 @@
       <article class="room-card">
         <a href="superior-hidromasaje.html" class="room-card-link">
           <figure class="room-media">
-            <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Superior con hidromasaje">
+            <img src="assets/img/Hab.-Sup.-Hidro-e1590790161248-1000x1000.jpg" alt="Superior con hidromasaje">
             <figcaption class="room-caption">
               <span class="room-title">Superior con hidromasaje</span>
               <span class="room-arrow">→</span>
@@ -239,11 +254,14 @@
 
     </div>
   </div>
+  <div class="rooms-footer">
+  <a href="habitaciones.html" class="btn-view-rooms">Ver todas las habitaciones</a>
+</div>
 </section>
 
 
 
-    <!-- SERVICIOS -->
+    <!-- SERVICIOS
     <section class="section section-services" id="servicios">
   <div class="container">
     <div class="section-header">
@@ -298,7 +316,7 @@
     </div>
   </div>
 </section>
-
+ -->
 
     <!-- SITIOS -->
     <section class="section section-sitios" id="sitios">
@@ -315,8 +333,8 @@
 
         <figure class="sitios-media" id="galeria">
           <picture>
-            <source srcset="assets/img/suiteconjacuzzi-1-1600.webp" type="image/webp">
-            <img src="assets/img/suiteconjacuzzi-1-1600.jpg" alt="Fachada clásica de Buenos Aires cerca del hotel.">
+            <source srcset="assets/img/qxdwTzJnf_1256x620__1.jpg" type="image/webp">
+            <img src="assets/img/qxdwTzJnf_1256x620__1.jpg" alt="Fachada clásica de Buenos Aires cerca del hotel.">
           </picture>
         </figure>
       </div>
@@ -327,8 +345,8 @@
 
   <!-- Encabezado -->
   <div class="container section-header">
-    <h2>Testimonios</h2>
-    <!--<p>Lo que dicen quienes ya vivieron la experiencia AyB.</p>-->
+    <!--<h2>Testimonios</h2>
+    <p>Lo que dicen quienes ya vivieron la experiencia AyB.</p>-->
   </div>
 
   <!-- NUEVO LAYOUT: tarjetas + testimonios -->
@@ -336,11 +354,11 @@
 
     <!-- Columna izquierda: tarjetas Google / Booking -->
     <div class="testimonials-ratings">
-      <img src="assets/img/googlepuntos.svg"
+      <img src="assets/img/googleclaro.svg"
            alt="Puntuación Google"
            class="rating-card">
 
-      <img src="assets/img/bookingpuntos.svg"
+      <img src="assets/img/bookingclaro.svg"
            alt="Puntuación Booking"
            class="rating-card">
     </div>
@@ -387,22 +405,32 @@
 
 
     <!-- MAPA -->
-    <section class="section section-map" id="mapa">
-      <div class="container section-header">
-        <h2>Cómo llegar</h2>
-        <p>En pleno centro de la Ciudad de Buenos Aires, cerca de los principales puntos culturales.</p>
-      </div>
+<section class="section section-map" id="mapa">
+  <div class="container">
 
-      <div class="container map-wrapper">
-        <div class="map-embed">
-          <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.3378790065385!2d-58.391991724480405!3d-34.605990372953435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccace55555555%3A0x7c8362e771989eb3!2sHotel%20A%20y%20B%20Internacional!5e0!3m2!1ses!2sar!4v1763400884642!5m2!1ses!2sar"
-  style="border:0;" allowfullscreen="" loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-        </div>
+    <!-- Título + texto -->
+    <div class="map-header">
+      <h2>Cómo llegar</h2>
+      <p>
+        En pleno centro de la Ciudad de Buenos Aires, cerca de los principales puntos culturales.
+      </p>
+    </div>
+
+    <!-- Mapa -->
+    <div class="map-wrapper">
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.3378790065385!2d-58.391991724480405!3d-34.605990372953435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccace55555555%3A0x7c8362e771989eb3!2sHotel%20A%20y%20B%20Internacional!5e0!3m2!1ses!2sar!4v1763400884642!5m2!1ses!2sar"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- CONTACTO -->
     <section class="section section-contact" id="contacto">
@@ -604,6 +632,20 @@ startAutoScroll();
 carousel.addEventListener("mouseenter", stopAutoScroll);
 carousel.addEventListener("mouseleave", startAutoScroll);
 </script>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+
+    if (window.scrollY > 40) {
+      header.classList.add("header-solid");
+    } else {
+      header.classList.remove("header-solid");
+    }
+  });
+</script>
+
 
 </body>
 </html>
