@@ -2305,7 +2305,7 @@ body {
   filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.75)); /* glow neón */
 
   pointer-events: none; /* NO tapa botones ni texto */
-  z-index: 0;           /* debajo de todo */
+  z-index: -1;           /* debajo de todo */
 }
 
 /* HALO radial glow detrás */
@@ -2518,4 +2518,38 @@ body {
   inset: 0;
   background: #074F4D;              /* sin transparencia */
   z-index: -1;                      /* queda detrás del contenido */
+}
+
+.section-contact {
+  position: relative;
+  background-color: #074F4D; /* verde pleno */
+  overflow: hidden;
+}
+
+/* Trama con el rombo svg repetido */
+.section-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/assets/img/vector.svg");
+  background-repeat: repeat;
+
+  /* 50% del tamaño original del icono */
+  background-size: 40px 40px; /* ajusta según tu rombo */
+
+  /* Espaciado entre las figuras */
+  background-position: 200px 50px;
+
+  /* Muy sutil */
+  opacity: 0.03;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Para asegurar que el contenido quede arriba */
+.section-contact > * {
+  position: relative;
+  z-index: 1;
 }
