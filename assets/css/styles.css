@@ -185,8 +185,8 @@ a:focus-visible {
   /*box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);*/
   /*backdrop-filter: blur(10px);*/
 
-  width: calc(100% - 2.4rem);
-  max-width: 680px;
+  width: calc(100% - 2rem);
+  max-width: 1200px;
 }
 
 /* AL SCROLL: se tiñe de verde */
