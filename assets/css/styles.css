@@ -135,8 +135,8 @@ a:focus-visible {
   position: absolute;
   inset: 0;                  /* top:0; right:0; bottom:0; left:0; */
   background-image:
-    linear-gradient(to bottom, rgba(99, 107, 107, 0.55), rgba(35, 37, 37, 0.92)),
-    url("../img/--DSCN3570-1-e1590789510582.jpg");   /* o .jpg si preferís */
+    /*linear-gradient(to bottom, rgba(99, 107, 107, 0.55), rgba(35, 37, 37, 0.92)),*/
+    url("../img/A&B_Terraza3-9484.jpg");   /* o .jpg si preferís */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -817,6 +817,11 @@ a:focus-visible {
   border-radius: 50% 50% 12% 12% / 28% 28% 6% 6%;      /* forma de cápsula */
   overflow: hidden;
   box-shadow: var(--shadow-soft);
+    border: 3px solid #fff;
+  box-shadow: 
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 /* Imagen adentro de la cápsula */
@@ -1830,6 +1835,8 @@ border-top-right-radius: 120px !important;
   height: 100%;
   display: block;
   object-fit: cover;
+   border: 3px solid #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 /* Animación elegante */
@@ -2029,6 +2036,9 @@ border-top-right-radius: 120px !important;
   height: 100%;
   display: block;
   object-fit: cover;
+   border: 3px solid #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgba(255, 255, 255, 0.5);
+
 }
 
 /* Flechas */
@@ -2128,6 +2138,7 @@ border-top-right-radius: 120px !important;
   align-items: center;
   margin-top: 0.35rem;
   flex-wrap: nowrap;
+  
 }
 
 .suite-thumb {
@@ -2146,6 +2157,7 @@ border-top-right-radius: 120px !important;
     transform 0.25s ease,
     box-shadow 0.25s ease,
     outline 0.25s ease;
+    
 }
 
 .suite-thumb img {
@@ -2226,7 +2238,7 @@ border-top-right-radius: 120px !important;
 /*FONDO DE COLOR*/
 
 body {
-  background: linear-gradient(135deg, #04847B 0%, #074F4D 100%);
+  background: linear-gradient(135deg, #131414 0%, #074F4D 100%);
   background-attachment: fixed;
 }
 
@@ -2304,9 +2316,14 @@ body {
   box-shadow: 0 18px 38px rgba(0, 0, 0, 0.36); /* sombra suave para despegar del fondo */
   margin-left: -30px;
   margin-top: 3rem;  /* menos separación */
-
+  border: 3px solid #fff;
+  box-shadow: 
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px rgba(255, 255, 255, 0.5);
   
 }
+
 
 /* Dos columnas en desktop */
 @media (min-width: 768px) {
@@ -2388,6 +2405,7 @@ body {
   opacity: 1.5;              /* opcional para suavizar */
   margin-top: 0.2rem;
   margin-bottom: 2rem;
+  
 }
 
 
