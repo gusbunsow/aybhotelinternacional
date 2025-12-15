@@ -42,12 +42,13 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--ayb-text);
-  background-color: var(--ayb-bg);
+  background-color: var(--ayb-orange);
   /*background-image: url("../img/vector.svg");*/
   background-repeat: repeat;
   background-size: 420px auto;
   /*
     background: linear-gradient(180deg, #DDE1CE 0%, #FAF6EE 100%);
+    background-color: var(--ayb-bg);
     background-attachment: fixed;
   */
 }
@@ -116,9 +117,17 @@ a:focus-visible {
 /* Hero: contenedor general */
 .hero {
   position: relative;
-  min-height: 520px;         /* altura mínima para que se vea la foto */
+  min-height: 820px;
   overflow: hidden;
   color: var(--ayb-white);
+  
+  /* Curva convexa con clip-path */
+  clip-path: ellipse(100% 100% at 50% 0%);
+  
+  /* Variantes de curvatura (prueba cambiando los porcentajes): */
+  /* clip-path: ellipse(120% 100% at 50% 0%); */ /* Curva más suave */
+  /* clip-path: ellipse(80% 100% at 50% 0%); */  /* Curva más pronunciada */
+  /* clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%); */ /* Curva personalizada */
 }
 
 /* Capa de imagen de fondo del héroe */
@@ -127,7 +136,7 @@ a:focus-visible {
   inset: 0;                  /* top:0; right:0; bottom:0; left:0; */
   background-image:
     linear-gradient(to bottom, rgba(99, 107, 107, 0.55), rgba(35, 37, 37, 0.92)),
-    url("../img/DSCN3570-1-e1590789510582.jpg");   /* o .jpg si preferís */
+    url("../img/--DSCN3570-1-e1590789510582.jpg");   /* o .jpg si preferís */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -477,15 +486,39 @@ a:focus-visible {
    BOOKING
    ========================= */
 .booking {
-  margin-top: -2.8rem;
+  margin-top: 50px;
   margin-bottom: 2.5rem;
 }
 
 .booking-card {
-  background: var(--ayb-white);
-  box-shadow: var(--shadow-soft);
+  background: rgba(250, 243, 234, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: 22px;
-  padding: 1.1rem 1rem 1.25rem;
+  padding: 1.6rem 1rem 1.25rem;
+  
+  /* Efecto base */
+  box-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.4),
+    0 0 10px rgba(255, 255, 255, 0.3);
+  
+  /* Animación de pulsación */
+  animation: neon-pulse 3s infinite ease-in-out;
+}
+
+/* Animación para variar intensidad */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 8px rgba(255, 255, 255, 0.6),
+      0 0 15px rgba(255, 255, 255, 0.4),
+      0 0 20px rgba(255, 255, 255, 0.3);
+  }
 }
 
 .booking-form {
@@ -574,15 +607,18 @@ a:focus-visible {
    HABITACIONES
    ========================= */
 .section-rooms {
-  background: rgba(244, 230, 215, 0.4);
+  background: rgba(244, 230, 215, 0);
 }
 
 .rooms-carousel {
   display: flex;
   overflow-x: auto;
   gap: 1rem;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.1rem;
   scroll-snap-type: x mandatory;
+  transform: scale(1.2) translateX(-200px);
+  transform-origin: top center; /* Expande desde la parte superior */
+  padding-bottom: 2.5rem; /* Compensa espacio extra necesario */
 }
 
 .rooms-carousel::-webkit-scrollbar {
@@ -601,7 +637,7 @@ a:focus-visible {
   border-radius: 0;
   box-shadow: none;
   overflow: visible;
-  scroll-snap-align: centre;
+  scroll-snap-align: center;
 }
 
 .room-media {
@@ -686,6 +722,7 @@ a:focus-visible {
 .room-arrow {
   font-size: 1rem;
 }
+
 
 /* =========================
    SERVICIOS
@@ -776,7 +813,7 @@ a:focus-visible {
 .sitios-media {
   aspect-ratio: 3 / 5;
   margin: 0 auto;
-  max-width: 260px;          /* ancho de la “pastilla” */
+  max-width: 100%;          /* ancho de la “pastilla” */
   border-radius: 50% 50% 12% 12% / 28% 28% 6% 6%;      /* forma de cápsula */
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -815,7 +852,7 @@ a:focus-visible {
    TESTIMONIOS
    ========================= */
 .section-testimonials {
-  background:  #074F4D;
+  background:  transparent;
   padding: 4.5rem 1.2rem;
 }
 
@@ -959,7 +996,8 @@ a:focus-visible {
 }
 
 .map-embed {
-  border-radius: 22px;
+    height: 400px;
+  border-radius: 26px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   background: #ddd;
@@ -975,7 +1013,7 @@ a:focus-visible {
    CONTACTO
    ========================= */
 .section-contact {
-  background: var(--ayb-bg);
+  background: transparent;
 }
 
 .contact-layout {
@@ -1053,6 +1091,7 @@ a:focus-visible {
   height: 22px;
   flex-shrink: 0;        /* evita que se achique si el texto es largo */
 }
+
 
 
 /* =========================
@@ -1264,8 +1303,9 @@ a:focus-visible {
    ========================= */
 @media (min-width: 640px) {
   .hero-inner {
-    padding-bottom: 5.4rem;
-  }
+    padding-top: 300px; /* Ajusta este valor según necesites */
+  min-height: 700px;
+}
 
   .booking {
     margin-top: -3.3rem;
@@ -1693,7 +1733,7 @@ border-top-right-radius: 120px !important;
 .rh-anim {
   opacity: 0;
   transform: translateY(18px);
-  animation: rhFadeUp 0.9s ease-out forwards;
+  animation: rhFadeUp 1.5s ease-out forwards;
 }
 
 /* Pequeño “stagger” por orden */
@@ -2175,6 +2215,7 @@ border-top-right-radius: 120px !important;
   border-radius: 28px;
   text-decoration: none;
   transition: background 0.25s ease, transform 0.2s ease;
+  margin-top: 5rem; /* Margen superior adicional */
 }
 
 .btn-view-rooms:hover {
@@ -2231,7 +2272,7 @@ body {
 /* Título y texto en cremita */
 #nosotros .nosotros-hotel-name h1 {
   font-family: "DM Sans", sans-serif;
-  font-weight: 200;               /* finito, elegante */
+  font-weight: 100;               /* finito, elegante */
   color: #FAF3EA;
   letter-spacing: 0.2px;          /* leve mejora para títulos finos */
   font-size: 3.4rem;              /* ajuste suave del tamaño */
@@ -2245,22 +2286,26 @@ body {
 /* PÁRRAFO */
 #nosotros .nosotros-text {
   color: #FAF3EA;
-  font-size: 1.25rem;      /* ~30% más grande */
-  font-weight: 200;
+  font-size: 1rem;      /* ~30% más grande */
+  font-weight: 100;
   line-height: 1.35;       /* más compacto y elegante */
-  max-width: 540px;        /* controla la longitud del texto */
+  max-width: 430px;        /* controla la longitud del texto */
   margin-left: 30px;       /* MISMA tabulación que el título */
   margin-top: 0.5rem;
 }
 
 /* Imagen derecha con curva más marcada y opuesta + sombra clara */
 .nosotros-media img {
-  width: 100%;
+ 
+  max-width: 150%;
   display: block;
   border-radius: 0 32px 0 32px;   /* sup derecha + inf derecha más pronunciadas */
   object-fit: cover;
   box-shadow: 0 18px 38px rgba(0, 0, 0, 0.36); /* sombra suave para despegar del fondo */
   margin-left: -30px;
+  margin-top: 3rem;  /* menos separación */
+
+  
 }
 
 /* Dos columnas en desktop */
@@ -2334,7 +2379,7 @@ body {
 .section-rooms .section-header h2 {
   color: #FFFFFF;            /* por si tenía override */
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 2rem;
 }
 
@@ -2448,9 +2493,102 @@ body {
 /* Iframe del mapa */
 .section-map .map-embed iframe {
   width: 100%;
-  height: 740px;             /* ALTURA DEL MAPA */
+  height: 600px;             /* ALTURA DEL MAPA */
   border: 0;
   display: block;
+}
+
+/* =========================
+   RESTAURAR COLORES DE TEXTO
+   ========================= */
+
+/* Primero, asegurémonos que los títulos tengan el color correcto */
+.section-contact-map .section-header h2 {
+  color: var(--ayb-bg);
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 1rem;
+   font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.15;
+  margin-left: 30px;       /* misma tabulación que Nosotros */
+  margin-bottom: 0.8rem;
+}
+
+.section-contact-map .map-header h2,
+.section-contact-map .map-header h3 {
+  color: var(--ayb-green);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-contact-map .contact-info h3 {
+  color: var(--ayb-bg);
+  font-size: 1rem;
+  margin: 0 0 0.3rem;
+}
+
+/* Párrafos */
+.section-contact-map p {
+  color: var(--ayb-bg);
+  font-size: 0.9rem;
+  margin: 0 0 0.35rem;
+}
+
+/* ===========================================
+   DOS COLUMNAS SIMPLES Y FUNCIONALES
+   =========================================== */
+
+/* EN DESKTOP: dos columnas */
+@media (min-width: 768px) {
+  .contact-map-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .contact-column {
+    padding-right: -30px;
+  }
+  
+  .map-column {
+    
+    width: 55%;
+  }
+}
+
+/* EN MÓVIL: una columna */
+@media (max-width: 767px) {
+  .contact-map-wrapper {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+/* Mantén el fondo transparente */
+.section-contact-map {
+  background: transparent;
+  padding: 40px 0;
+}
+
+/* Restaura el diseño del formulario */
+.section-contact-map .contact-form {
+  background: var(--ayb-white);
+  border-radius: 22px;
+  padding: 1rem 1rem 1.2rem;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1.5rem;
+}
+
+/* Restaura el diseño de la info de contacto */
+.section-contact-map .contact-info {
+  font-size: 0.9rem;
+  background: var(--ayb-white);
+  border-radius: 22px;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
 }
 
 /* =============================
@@ -2553,3 +2691,4 @@ body {
   position: relative;
   z-index: 1;
 }
+

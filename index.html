@@ -54,105 +54,95 @@
   </script>
 </head>
 <body>
+  <body style="
+  background: linear-gradient(180deg, #000000 0%, #074F4D 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+">
   <div class="corona-bg"></div>
 
   <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
 
-  <!-- HERO + HEADER -->
-  <header class="site-header" id="inicio">
-    <div class="hero">
-      <div class="hero-media" aria-hidden="true"></div>
-
-      <div class="hero-inner container">
-        <!-- Header flotante -->
-        <div class="header-card">
-  <a href="#inicio" class="logo-link">
-    <img src="assets/img/ayblogohorizontal.svg" alt="Hotel AyB Internacional" class="logo-img">
-  </a>
-
-  <!-- Botón hamburguesa SOLO para móvil -->
-  <button class="nav-toggle" aria-controls="menu-principal" aria-expanded="false">
-    <img src="assets/img/vector-hamburguesa.svg"
-         alt="Abrir menú"
-         class="icon-menu icon-menu-open">
-    <img src="assets/img/vector-close.svg"
-         alt="Cerrar menú"
-         class="icon-menu icon-menu-close">
-    <span class="sr-only">Abrir o cerrar menú principal</span>
-  </button>
-
-  <nav class="nav" id="menu-principal" aria-label="Navegación principal">
-    <ul>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#habitaciones">Habitaciones</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="sitios.html">Sitios</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-
-      <!-- Idiomas dentro del nav -->
-      <li class="nav-lang">
-        <a href="/index.html" class="lang active">ES</a>
-        <span class="lang-sep">·</span>
-        <a href="/en/index.html" class="lang">EN</a>
-        <span class="lang-sep">·</span>
-        <a href="/pt/index.html" class="lang">PT</a>
-      </li>
-
-      <li><a href="#reservar" class="nav-cta">Reservar</a></li>
-    </ul>
-  </nav>
-</div>
-
-
-        <!-- Texto hero -->
-        <div class="hero-text">
-          <!--<p class="hero-kicker">Hotel AyB Internacional · San Nicolás</p>-->
-          <!--<h1>Tradición porteña y vida cultural, en un mismo lugar.</h1>-->
-          <!--<p class="hero-subtitle">
-            Símbolos porteños, corazones abiertos. Hospedate a pasos de los teatros, cafés y bares notables de Buenos Aires.
-          </p>
-          <div class="hero-actions">
-             <a href="#reservar" class="btn btn-primary">Reservar ahora</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScvx_XB2Dar2wKDvwczaOnd21n3Pr3aBOan2nrH8JB_G9qWlQ/viewform" class="btn btn-ghost">Check-In Online</a>
-          </div>
-          -->
-        </div>
-      </div>
-
-      <!--<div class="hero-curve" aria-hidden="true"></div>-->
-    </div>
-  </header>
- <div>
+ <!-- HEADER + HERO - ESTRUCTURA CORREGIDA -->
+<header class="site-header" id="inicio">
   
- </div>
-  <!-- MOTOR DE BÚSQUEDA (placeholder) -->
-  <section class="booking" aria-label="Motor de reservas">
-    <div class="container booking-card">
-      <form action="#" method="get" class="booking-form" id="reservar">
-        <div class="booking-field">
-          <label for="checkin">Check-in</label>
-          <input type="date" id="checkin" name="checkin">
-        </div>
-        <div class="booking-field">
-          <label for="checkout">Check-out</label>
-          <input type="date" id="checkout" name="checkout">
-        </div>
-        <div class="booking-field booking-field-inline">
-          <label for="adultos">Adultos</label>
-          <input type="number" id="adultos" name="adultos" min="1" value="2">
-        </div>
-        <div class="booking-field booking-field-inline">
-          <label for="ninos">Niños</label>
-          <input type="number" id="ninos" name="ninos" min="0" value="0">
-        </div>
-        <div class="booking-actions">
-          <button type="submit" class="btn btn-primary btn-full">Reservar ahora</button>
-        </div>
-      </form>
-    </div>
-  </section>
+  <!-- HEADER CARD (fuera del hero) -->
+  <div class="header-card">
+    <a href="#inicio" class="logo-link">
+      <img src="assets/img/ayblogohorizontal.svg" alt="Hotel AyB Internacional" class="logo-img">
+    </a>
 
+    <!-- Botón hamburguesa SOLO para móvil -->
+    <button class="nav-toggle" aria-controls="menu-principal" aria-expanded="false">
+      <img src="assets/img/vector-hamburguesa.svg"
+           alt="Abrir menú"
+           class="icon-menu icon-menu-open">
+      <img src="assets/img/vector-close.svg"
+           alt="Cerrar menú"
+           class="icon-menu icon-menu-close">
+      <span class="sr-only">Abrir o cerrar menú principal</span>
+    </button>
+
+    <!-- Navegación principal -->
+    <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#habitaciones">Habitaciones</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="sitios.html">Sitios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+
+        <!-- Idiomas -->
+        <li class="nav-lang">
+          <a href="/index.html" class="lang active">ES</a>
+          <span class="lang-sep">·</span>
+          <a href="/en/index.html" class="lang">EN</a>
+          <span class="lang-sep">·</span>
+          <a href="/pt/index.html" class="lang">PT</a>
+        </li>
+
+        <li><a href="#reservar" class="nav-cta">Reservar</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- HERO SECTION (separado) -->
+  <div class="hero">
+    <div class="hero-media" aria-hidden="true"></div>
+
+    <div class="hero-inner container">
+      <!-- MOTOR DE RESERVAS DENTRO del hero -->
+      <section class="booking" aria-label="Motor de reservas">
+        <div class="booking-card">
+          <form action="#" method="get" class="booking-form" id="reservar">
+            <div class="booking-field">
+              <label for="checkin">Check-in</label>
+              <input type="date" id="checkin" name="checkin">
+            </div>
+            <div class="booking-field">
+              <label for="checkout">Check-out</label>
+              <input type="date" id="checkout" name="checkout">
+            </div>
+            <div class="booking-field booking-field-inline">
+              <label for="adultos">Adultos</label>
+              <input type="number" id="adultos" name="adultos" min="1" value="2">
+            </div>
+            <div class="booking-field booking-field-inline">
+              <label for="ninos">Niños</label>
+              <input type="number" id="ninos" name="ninos" min="0" value="0">
+            </div>
+            <div class="booking-actions">
+              <button type="submit" class="btn btn-primary btn-full">Reservar ahora</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</header>
+<!-- El resto de tu contenido continúa aquí -->
   <main id="contenido-principal">
     <!-- NOSOTROS -->
 <section class="section section-intro" id="nosotros">
@@ -181,7 +171,7 @@
 <section class="section section-rooms" id="habitaciones">
   <div class="container">
     <header class="section-header">
-      <h2>Nuestras habitaciones</h2>
+      <h2>Nuestras Habitaciones</h2>
       <p>Elegí la categoría que mejor se adapta a tu estadía.</p>
     </header>
 
@@ -324,9 +314,8 @@
         <div class="sitios-text">
           <h2>Sitios de interés</h2>
           <p>
-            En el AyB no solo te damos la bienvenida, te acompañamos a descubrir la ciudad.
-            Nuestros anfitriones culturales te orientarán sobre los mejores teatros,
-            bares notables y museos de la zona.
+            En el AyB te acompañamos a descubrir la ciudad.
+            Nuestros anfitriones culturales te orientarán sobre los mejores teatros, bares notables y museos de la zona.
           </p>
           <a href="sitios.html" class="btn-cultural">Ver recomendaciones culturales</a>
         </div>
@@ -403,43 +392,21 @@
 
 </section>
 
-
-    <!-- MAPA -->
-<section class="section section-map" id="mapa">
+<!-- SECCIÓN UNIFICADA DE CONTACTO Y MAPA -->
+<section class="section section-contact-map" id="contacto-mapa">
   <div class="container">
 
-    <!-- Título + texto -->
-    <div class="map-header">
-      <h2>Cómo llegar</h2>
-      <p>
-        En pleno centro de la Ciudad de Buenos Aires, cerca de los principales puntos culturales.
-      </p>
+    <!-- Título unificado -->
+    <div class="section-header">
+      <h2>Contacto y Ubicación</h2>
+      <!--<p>Escribinos para coordinar tu reserva o hacer una consulta. Estamos en pleno centro de la Ciudad de Buenos Aires, cerca de los principales puntos culturales.</p>-->
     </div>
 
-    <!-- Mapa -->
-    <div class="map-wrapper">
-      <div class="map-embed">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.3378790065385!2d-58.391991724480405!3d-34.605990372953435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccace55555555%3A0x7c8362e771989eb3!2sHotel%20A%20y%20B%20Internacional!5e0!3m2!1ses!2sar!4v1763400884642!5m2!1ses!2sar"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- CONTACTO -->
-    <section class="section section-contact" id="contacto">
-      <div class="container section-header">
-        <h2>Contacto</h2>
-        <p>Escribinos para coordinar tu reserva o hacer una consulta.</p>
-      </div>
-
-      <div class="container contact-layout">
+    <!-- Contenedor principal para el layout -->
+    <div class="contact-map-wrapper">
+      
+      <!-- Columna izquierda: Formulario y contacto -->
+      <div class="contact-column">
         <form class="contact-form">
           <div class="form-field">
             <label for="nombre">Nombre</label>
@@ -455,27 +422,50 @@
           </div>
           <button type="submit" class="btn btn-primary btn-full">Enviar</button>
         </form>
-
+        
+        <!--
         <div class="contact-info">
           <img src="assets/img/gatoapoyado.svg" alt="" class="contact-cat" aria-hidden="true">
           <h3>Hotel AyB Internacional</h3>
           <p>Montevideo 248 – Buenos Aires, Argentina.</p>
-
-<p class="contact-line">
-  <img src="assets/img/phone.svg" alt="Teléfono" class="contact-icon">
-  <a href="tel:+541143849516">+54 11 4384-9516</a>
-</p>
-
-<p class="contact-line">
-  <img src="assets/img/mail.svg" alt="Correo electrónico" class="contact-icon">
-  <a href="mailto:reservas@hotelayb.com.ar">reservas@hotelayb.com.ar</a>
-</p>
+          
+          <p class="contact-line">
+            <img src="assets/img/phone.svg" alt="Teléfono" class="contact-icon">
+            <a href="tel:+541143849516">+54 11 4384-9516</a>
+          </p>
+          
+          <p class="contact-line">
+            <img src="assets/img/mail.svg" alt="Correo electrónico" class="contact-icon">
+            <a href="mailto:reservas@hotelayb.com.ar">reservas@hotelayb.com.ar</a>
+          </p>
+          
           <p class="contact-tagline">Símbolos porteños, corazones abiertos.</p>
+        </div>-->
+
+      </div> <!-- ¡ESTA ES LA ETIQUETA QUE FALTABA CERRAR! -->
+      
+      <!-- Columna derecha: Mapa -->
+      <!--<div class="map-column">
+        <div class="map-header">
+          <h3>Cómo llegar</h3>
+          <p>En pleno centro de la Ciudad de Buenos Aires, cerca de los principales puntos culturales.</p>
+        </div>
+      -->
+        <div class="map-wrapper">
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.3378790065385!2d-58.391991724480405!3d-34.605990372953435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccace55555555%3A0x7c8362e771989eb3!2sHotel%20A%20y%20B%20Internacional!5e0!3m2!1ses!2sar!4v1763400884642!5m2!1ses!2sar"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
 
+    </div>
+  </div>
+</section>
   <!-- BOTÓN WHATSAPP + CTA RESERVA -->
   <div class="floating-cta">
     <a href="#reservar" class="btn btn-primary">Reservar ahora</a>
