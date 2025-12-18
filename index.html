@@ -11,6 +11,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- En el <head> de tu documento HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- CSS principal -->
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -54,13 +56,7 @@
   </script>
 </head>
 <body>
-  <!--
-  <body style="
-  background: linear-gradient(180deg, #000000 0%, #074F4D 100%) !important;
-  background-attachment: fixed !important;
-  min-height: 100vh !important;
-  margin: 0 !important;
-">-->
+
   <div class="corona-bg"></div>
 
   <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
@@ -145,190 +141,422 @@
 </header>
 <!-- El resto de tu contenido continúa aquí -->
   <main id="contenido-principal">
-    <!-- NOSOTROS -->
+   <!-- NOSOTROS -->
 <section class="section section-intro" id="nosotros">
   <div class="container nosotros-grid">
-    
-    <!-- Texto -->
-    <div class="nosotros-hotel-name">
-      <h1>AyB Hotel Internacional</h1>
-      <p class="nosotros-text">
-  Lleva más de 25 años recibiendo pasajeros que buscan algo más que una estadía:
-  una experiencia porteña genuina.
-</p>
-
+    <!-- Contenedor de imágenes (izquierda) -->
+    <div class="nosotros-imagenes">
+      <div class="nosotros-media">
+        <img src="assets/img/201379472.jpg" alt="Espacio del Hotel AyB Internacional">
+      </div>
+      <div class="nosotros-media-2">
+        <img src="assets/img/76518989.jpg" alt="Espacio del Hotel AyB Internacional">
+      </div>
     </div>
 
-    <!-- Imagen derecha -->
-    <div class="nosotros-media">
-      <img src="assets/img/DSCN3574-e1590789557208.jpg" alt="Espacio del Hotel AyB Internacional">
+    <!-- Contenedor de texto (derecha) -->
+    <div class="nosotros-contenido">
+      <h1>NOSOTROS</h1>
+           <!-- Línea divisoria -->
+           <div class="nosotros-divisor"></div>
+      <p class="nosotros-text">Más de 25 años recibiendo pasajeros que buscan algo más que una estadía.</p>
+      <p class="nosotros-text">Una genuina experiencia potricia.</p>
+      
+      <!-- Texto destacado -->
+      <div class="nosotros-destacado">
+        <p class="nosotros-destacado-texto">Habitaciones Suite</p>
+        <p class="nosotros-destacado-subtexto">Con Jacuzzi</p>
+      </div>
     </div>
-
   </div>
 </section>
-
 
 <!-- HABITACIONES -->
-<section class="section section-rooms" id="habitaciones">
+<section class="section" id="habitaciones">
   <div class="container">
     <header class="section-header">
-      <h2>Nuestras Habitaciones</h2>
-      <p>Elegí la categoría que mejor se adapta a tu estadía.</p>
+      <h2>Habitaciones</h2>
     </header>
 
-    <div class="rooms-carousel" aria-label="Habitaciones del hotel" id="roomsCarousel">
+    <!-- Carrusel nuevo con clases únicas -->
+    <div class="ayb-carousel-container">
+      <!-- Contenedor principal -->
+      <div class="ayb-carousel-wrapper">
+        <div class="ayb-carousel-track">
+          <!-- 1. Suite con Jacuzzi -->
+          <div class="ayb-carousel-slide ayb-slide-active">
+            <div class="ayb-room-card">
+              <a href="suite-con-jacuzzi.html" class="ayb-room-link">
+                <div class="ayb-room-image">
+                  <img src="assets/img/A&B_HabCuadruple_1-1963.jpg" alt="Suite con Jacuzzi" loading="lazy">
+                </div>
+                <div class="ayb-room-name">Suite con Jacuzzi</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Doble -->
+          <div class="ayb-carousel-slide">
+            <div class="ayb-room-card">
+              <a href="habitacion-doble.html" class="ayb-room-link">
+                <div class="ayb-room-image">
+                  <img src="assets/img/Hab.-Dbl.-Std-3-e1590790401308-1000x1000.jpg" alt="Habitación Doble" loading="lazy">
+                </div>
+                <div class="ayb-room-name">Habitación Doble</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Triple -->
+          <div class="ayb-carousel-slide">
+            <div class="ayb-room-card">
+              <a href="habitacion-triple.html" class="ayb-room-link">
+                <div class="ayb-room-image">
+                  <img src="assets/img/Hab.-Tpl.-Std-4-e1590790315733-1000x1000.jpg" alt="Habitación Triple" loading="lazy">
+                </div>
+                <div class="ayb-room-name">Habitación Triple</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Cuádruple -->
+          <div class="ayb-carousel-slide">
+            <div class="ayb-room-card">
+              <a href="habitacion-cuadruple.html" class="ayb-room-link">
+                <div class="ayb-room-image">
+                  <img src="assets/img/IMG_20160803_164611-e1590790203281-1000x1000.jpg" alt="Habitación Cuádruple" loading="lazy">
+                </div>
+                <div class="ayb-room-name">Habitación Cuádruple</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Superior con Hidromasaje -->
+          <div class="ayb-carousel-slide">
+            <div class="ayb-room-card">
+              <a href="superior-hidromasaje.html" class="ayb-room-link">
+                <div class="ayb-room-image">
+                  <img src="assets/img/Hab.-Sup.-Hidro-e1590790161248-1000x1000.jpg" alt="Superior con hidromasaje" loading="lazy">
+                </div>
+                <div class="ayb-room-name">Habitación Superior</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flechas de navegación -->
+      <button class="ayb-carousel-arrow ayb-arrow-prev" type="button">
+        <span class="ayb-arrow-icon">‹</span>
+      </button>
+      <button class="ayb-carousel-arrow ayb-arrow-next" type="button">
+        <span class="ayb-arrow-icon">›</span>
+      </button>
+    </div>
+
+    <!-- Puntos indicadores -->
+    <div class="ayb-carousel-dots">
+      <button class="ayb-dot ayb-dot-active"></button>
+      <button class="ayb-dot"></button>
+      <button class="ayb-dot"></button>
+      <button class="ayb-dot"></button>
+      <button class="ayb-dot"></button>
+    </div>
+
+    <!-- Botón ver todas -->
+    <div class="ayb-rooms-footer">
+      <a href="habitaciones.html" class="ayb-btn-rooms">Ver todas las habitaciones</a>
+    </div>
+  </div>
+</section>
+
+ <!-- POR QUÉ ELEGIRNOS -->
+<section class="section section-why-choose" id="porque-elegirnos">
+  <div class="why-choose-container">
+    <!-- Fondo de imagen -->
+    <div class="why-choose-bg">
+      <img src="assets/img/calle_corrientes_.jpg_713468040.webp" alt="Calle Corrientes - Hotel AyB Internacional">
+    </div>
+    
+    <!-- Tarjeta izquierda con contenido -->
+    <div class="why-choose-card">
+      <!-- Título de la sección -->
+      <div class="why-choose-header">
+        <h2 class="why-choose-title">¿Por qué elegirnos?</h2>
+      </div>
       
-      <!-- 1. Suite con Jacuzzi -->
-      <article class="room-card">
-        <a href="suite-con-jacuzzi.html" class="room-card-link">
-          <figure class="room-media">
-            <img src="assets/img/Hab.-Suite.-Jacuzzi-2-e1590790052510-1000x1000.jpg" alt="Suite con Jacuzzi">
-            <figcaption class="room-caption">
-              <span class="room-title">Suite con Jacuzzi</span>
-              <span class="room-arrow">→</span>
-            </figcaption>
-          </figure>
-        </a>
-      </article>
-
-      <!-- 2. Doble -->
-      <article class="room-card">
-        <a href="habitacion-doble.html" class="room-card-link">
-          <figure class="room-media">
-            <img src="assets/img/Hab.-Dbl.-Std-3-e1590790401308-1000x1000.jpg" alt="Habitación Doble">
-            <figcaption class="room-caption">
-              <span class="room-title">Doble</span>
-              <span class="room-arrow">→</span>
-            </figcaption>
-          </figure>
-        </a>
-      </article>
-
-      <!-- 3. Triple -->
-      <article class="room-card">
-        <a href="habitacion-triple.html" class="room-card-link">
-          <figure class="room-media">
-            <img src="assets/img/Hab.-Tpl.-Std-4-e1590790315733-1000x1000.jpg" alt="Habitación Triple">
-            <figcaption class="room-caption">
-              <span class="room-title">Triple</span>
-              <span class="room-arrow">→</span>
-            </figcaption>
-          </figure>
-        </a>
-      </article>
-
-      <!-- 4. Cuádruple -->
-      <article class="room-card">
-        <a href="habitacion-cuadruple.html" class="room-card-link">
-          <figure class="room-media">
-            <img src="assets/img/IMG_20160803_164611-e1590790203281-1000x1000.jpg" alt="Habitación Cuádruple">
-            <figcaption class="room-caption">
-              <span class="room-title">Cuádruple</span>
-              <span class="room-arrow">→</span>
-            </figcaption>
-          </figure>
-        </a>
-      </article>
-
-      <!-- 5. Superior con Hidromasaje -->
-      <article class="room-card">
-        <a href="superior-hidromasaje.html" class="room-card-link">
-          <figure class="room-media">
-            <img src="assets/img/Hab.-Sup.-Hidro-e1590790161248-1000x1000.jpg" alt="Superior con hidromasaje">
-            <figcaption class="room-caption">
-              <span class="room-title">Superior con hidromasaje</span>
-              <span class="room-arrow">→</span>
-            </figcaption>
-          </figure>
-        </a>
-      </article>
-
-    </div>
-  </div>
-  <div class="rooms-footer">
-  <a href="habitaciones.html" class="btn-view-rooms">Ver todas las habitaciones</a>
-</div>
+      <!-- Lista de beneficios en 2 columnas -->
+      <div class="benefits-grid">
+        
+        <!-- Columna 1 -->
+        <div class="benefits-column">
+          <div class="benefit-item">
+            <i class="fas fa-concierge-bell benefit-icon"></i>
+            <span class="benefit-text">Recepción 24/7</span>
+          </div>
+          
+          <div class="benefit-item">
+            <i class="fas fa-wine-bottle benefit-icon"></i>
+            <span class="benefit-text">Frigobar</span>
+          </div>
+          
+          <div class="benefit-item">
+            <i class="fas fa-suitcase-rolling benefit-icon"></i>
+            <span class="benefit-text">Guarda de equipaje sin cargo</span>
+          </div>
+          
+          <div class="benefit-item">
+            <i class="fas fa-sun benefit-icon"></i>
+            <span class="benefit-text">Solarium con ducha</span>
+          </div>
+          
+          <div class="benefit-item">
+            <i class="fas fa-lock benefit-icon"></i>
+            <span class="benefit-text">Caja fuerte privada</span>
+          </div>
+        </div>
+        
+        <!-- Columna 2 -->
+        <div class="benefits-column">
+          <div class="benefit-item">
+            <i class="fas fa-dumbbell benefit-icon"></i>
+            <span class="benefit-text">Gimnasio</span>
+          </div>
+          
+          <div class="benefit-item">
+            <i class="fas fa-coffee benefit-icon"></i>
+            <span class="benefit-text">Desayuno</span>
+          </div>
+          
+          <div class="benefit-item">
+            <i class="fas fa-wifi benefit-icon"></i>
+            <span class="benefit-text">WiFi libre sin cargo</span>
+          </div>
+          
+          <div class="benefit-item">
+            <i class="fas fa-snowflake benefit-icon"></i>
+            <span class="benefit-text">Aire acondicionado</span>
+          </div>
+          
+          <div class="benefit-item">
+            <i class="fas fa-broom benefit-icon"></i>
+            <span class="benefit-text">Limpieza diaria</span>
+          </div>
+        </div>
+        
+      </div> <!-- Fin benefits-grid -->
+    </div> <!-- Fin why-choose-card -->
+  </div> <!-- Fin why-choose-container -->
 </section>
 
 
+<!-- =========================
+     SITIOS CERCA
+     ========================= -->
 
-    <!-- SERVICIOS
-    <section class="section section-services" id="servicios">
+<section class="rh-experiencias py-5" id="experiencias">
   <div class="container">
-    <div class="section-header">
-      <h2>Servicios</h2>
-      <p>Todo lo que necesitás para una estadía.</p>
+    <header class="text-center mb-4">
+            <h2 class="rh-title">
+        <i class="fas fa-map-marker-alt"></i> Experiencias Cercanas
+      </h2>
+
+    <div class="row g-4">
+
+      <!-- Florida -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card rh-exp-card rh-anim h-100">
+          <img class="card-img-top" src="https://resizer.glanacion.com/resizer/v2/ciudad-autonoma-de-buenos-aires-buenos-aires-WN5QYCNKA5BTZPRJVHMIQF7QJ4.jpg?auth=537d27a4c8f68b831aae192fe185aabe7f9eb199940ae7d331cb5de57aaff205&width=1280&height=854&quality=70&smart=true" alt="Calle Florida">
+          <div class="card-body d-flex flex-column text-center">
+            <h3 class="card-title">Calle Florida <small class="text-muted">· 200 m</small></h3>
+            <p class="card-text flex-grow-1">A solo dos minutos del <strong>Hotel Regis</strong>, la peatonal Florida invita a recorrer tiendas, librerías, artistas callejeros y las Galerías Pacífico, uno de los centros comerciales más emblemáticos de Buenos Aires. Es ideal para quienes disfrutan de las compras, la cultura y el ritmo del centro porteño en su máxima expresión.</p>
+            <div class="text-center">
+              <a href="https://turismo.buenosaires.gob.ar/es/otros-establecimientos/calle-florida" target="_blank" class="btn btn-ir">Más Info</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Corrientes -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card rh-exp-card rh-anim h-100">
+          <img class="card-img-top" src="https://images.adsttc.com/media/images/5ab5/018c/f197/cc29/0200/00ea/slideshow/Obelisco-desde_Corrientes-TM.jpg?1521811844" alt="Avenida Corrientes">
+          <div class="card-body d-flex flex-column text-center">
+            <h3 class="card-title">Avenida Corrientes <small class="text-muted">· 100 m</small></h3>
+            <p class="card-text flex-grow-1">A una cuadra del <strong>Hotel Regis</strong>, la Avenida Corrientes vibra con teatros, librerías, pizzerías y luces que nunca se apagan. Es el corazón cultural de Buenos Aires, donde conviven los clásicos del teatro porteño, las pizzas de mostrador y las librerías abiertas hasta tarde. Un paseo imprescindible para vivir la ciudad a pleno.</p>
+            <div class="text-center">
+              <a href="https://turismo.buenosaires.gob.ar/es/article/paseo-de-los-artistas" target="_blank" class="btn btn-ir">Más Info</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- La Ideal -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card rh-exp-card rh-anim h-100">
+          <img class="card-img-top" src="https://laideal.ar/img/carrousel_2.jpg" alt="Confitería La Ideal">
+          <div class="card-body d-flex flex-column text-center">
+            <h3 class="card-title">Confitería La Ideal <small class="text-muted">· 250 m</small></h3>
+            <p class="card-text flex-grow-1">Fundada en 1912, la Confitería La Ideal es una joya arquitectónica restaurada que conserva su encanto original: vitrales, mármoles y arañas centenarias. Por sus mesas pasaron Gardel, Borges y hasta Madonna. Hoy sigue viva como café notable y pastelería de autor, un refugio porteño donde el té se toma entre historia y vitraux.</p>
+            <div class="text-center">
+              <a href="https://laideal.ar/index.html" target="_blank" class="btn btn-ir">Más Info</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Obelisco -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card rh-exp-card rh-anim h-100">
+          <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/0/00/ObeliscoBA2015.2.jpg" alt="Obelisco de Buenos Aires">
+          <div class="card-body d-flex flex-column text-center">
+            <h3 class="card-title">Obelisco <small class="text-muted">· 450 m</small></h3>
+            <p class="card-text flex-grow-1">El Obelisco de Buenos Aires, sobre la emblemática Avenida 9 de Julio, es una de las postales más reconocidas de la ciudad. A pasos del Hotel Regis, es el punto perfecto para quienes buscan alojamiento en el centro y desean explorar teatros, cafés y la vida porteña desde su corazón.</p>
+            <div class="text-center">
+              <a href="https://turismo.buenosaires.gob.ar/es/otros-establecimientos/obelisco" target="_blank" class="btn btn-ir">Más Info</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Teatro Colón -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card rh-exp-card rh-anim h-100">
+          <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Fachada_del_Teatro_Col%C3%B3n_en_Buenos_Aires%2C_Argentina.jpg/1200px-Fachada_del_Teatro_Col%C3%B3n_en_Buenos_Aires%2C_Argentina.jpg" alt="Teatro Colón">
+          <div class="card-body d-flex flex-column text-center">
+            <h3 class="card-title">Teatro Colón <small class="text-muted">· 600 m</small></h3>
+            <p class="card-text flex-grow-1">El Teatro Colón es uno de los templos de la ópera más prestigiosos del mundo, reconocido por su acústica perfecta y su arquitectura majestuosa. A pocas cuadras del Hotel Regis, se pueden realizar visitas guiadas todos los días de 10 a 17 horas, ideales para descubrir sus salones, su historia y la magia que lo distingue.</p>
+            <div class="text-center">
+              <a href="https://teatrocolon.org.ar/" target="_blank" class="btn btn-ir">Más Info</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Puerto Madero -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card rh-exp-card rh-anim h-100">
+          <img class="card-img-top" src="https://turismo.buenosaires.gob.ar/sites/turismo/files/panoramica-puerto-madero-1500x610.jpg" alt="Puerto Madero">
+          <div class="card-body d-flex flex-column text-center">
+            <h3 class="card-title">Puerto Madero <small class="text-muted">· 700 m</small></h3>
+            <p class="card-text flex-grow-1">El moderno barrio de Puerto Madero combina arquitectura contemporánea, paseos junto al río y una amplia oferta gastronómica. A solo unos minutos del Hotel Regis, es perfecto para caminar por sus diques, cruzar el Puente de la Mujer y disfrutar de restaurantes y bares con vistas únicas, tanto de día como de noche.</p>
+            <div class="text-center">
+              <a href="https://turismo.buenosaires.gob.ar/es/recorrido/puerto-madero" target="_blank" class="btn btn-ir">Más Info</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+</section>
+
+<!-- CONECTÁ CON NOSOTROS - IMÁGENES HORIZONTALES -->
+<section class="section section-connect" id="conecta-con-nosotros">
+  <!-- Encabezado con título y redes sociales -->
+  <div class="connect-header-container">
+    <div class="container">
+      <div class="connect-header-content">
+        <h2 class="connect-title">Conectá con nosotros</h2>
+        <div class="connect-social-header">
+          <a href="https://www.instagram.com/ayb_internacional/" target="_blank" class="social-icon-header" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" target="_blank" class="social-icon-header" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" target="_blank" class="social-icon-header" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="services-grid">
-
-      <div class="service-item">
-        <div class="service-icon">
-          <img src="assets/img/hotelbell.svg" alt="Recepción 24 horas" />
+  <!-- Contenido principal con imágenes horizontales a los lados -->
+  <div class="connect-main-container">
+    <div class="container">
+      <div class="connect-main-content">
+        
+        <!-- Grupo de imágenes izquierdo (horizontal) -->
+        <div class="side-images horizontal-left">
+          <div class="horizontal-image">
+            <img src="assets/img/Screenshot-2025-12-18-at-06-39-52-Instagram.png" alt="Instagram post 1">
+            <div class="image-overlay">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+          <div class="horizontal-image">
+            <img src="assets/img/Screenshot-2025-12-18-at-06-39-36-Instagram.png" alt="Instagram post 2">
+            <div class="image-overlay">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
         </div>
-        <h3>Recepción 24 horas</h3>
-      </div>
-
-      <div class="service-item">
-        <div class="service-icon">
-          <img src="assets/img/wifi.svg" alt="Wi-Fi gratuito" />
+        
+        <!-- Teléfono mockup en el centro -->
+        <div class="phone-mockup-center">
+          <div class="phone-mockup">
+            <!-- Parte superior del teléfono -->
+            <div class="phone-notch"></div>
+            
+            <!-- Pantalla del teléfono con perfil de Instagram -->
+            <div class="phone-screen">
+              <div class="instagram-profile">
+                <div class="insta-profile-header">
+                  <div class="insta-profile-pic">
+                    <div class="profile-avatar"></div>
+                  </div>
+                  <div class="insta-profile-info">
+                    <h3 class="insta-username">ayb_internacional</h3>
+                    <div class="insta-stats">
+                      <span><strong>125</strong> publicaciones</span>
+                      <span><strong>1.2k</strong> seguidores</span>
+                      <span><strong>356</strong> seguidos</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Mini grid de publicaciones -->
+                <div class="insta-mini-grid">
+                  <div class="mini-post"></div>
+                  <div class="mini-post"></div>
+                  <div class="mini-post"></div>
+                  <div class="mini-post"></div>
+                  <div class="mini-post"></div>
+                  <div class="mini-post"></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Barra inferior del teléfono -->
+            <div class="phone-bar"></div>
+          </div>
+          
+          <!-- Texto debajo del teléfono 
+          <div class="mockup-caption">
+            <p><i class="fab fa-instagram"></i> <strong>@ayb_internacional</strong></p>
+          </div>-->
         </div>
-        <h3>Wi-Fi gratuito</h3>
-      </div>
-
-      <div class="service-item">
-        <div class="service-icon">
-          <img src="assets/img/desayuno.svg" alt="Desayuno artesanal" />
+        
+        <!-- Grupo de imágenes derecho (horizontal) -->
+        <div class="side-images horizontal-right">
+          <div class="horizontal-image">
+            <img src="assets/img/Screenshot-2025-12-18-at-06-39-27-Instagram.png" alt="Instagram post 3">
+            <div class="image-overlay">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+          <div class="horizontal-image">
+            <img src="assets/img/Screenshot-2025-12-18-at-06-38-49-Instagram.png" alt="Instagram post 4">
+            <div class="image-overlay">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
         </div>
-        <h3>Desayuno artesanal</h3>
+        
       </div>
-
-      <div class="service-item">
-        <div class="service-icon">
-          <img src="assets/img/relaxterraza.svg" alt="Relax en terraza" />
-        </div>
-        <h3>Relax en terraza</h3>
-      </div>
-
-      <div class="service-item">
-        <div class="service-icon">
-          <img src="assets/img/lavanderia.svg" alt="Lavandería y limpieza diaria" />
-        </div>
-        <h3>Lavandería y limpieza diaria</h3>
-      </div>
-
-      <div class="service-item">
-        <div class="service-icon">
-          <img src="assets/img/teatro.svg" alt="Concierge cultural" />
-        </div>
-        <h3>Concierge cultural</h3>
-      </div>
-
     </div>
   </div>
 </section>
- -->
-
-    <!-- SITIOS -->
-    <section class="section section-sitios" id="sitios">
-      <div class="container sitios-layout">
-        <div class="sitios-text">
-          <h2>Sitios de interés</h2>
-          <p>
-            En el AyB te acompañamos a descubrir la ciudad.
-            Nuestros anfitriones culturales te orientarán sobre los mejores teatros, bares notables y museos de la zona.
-          </p>
-          <a href="sitios.html" class="btn-cultural">Ver recomendaciones culturales</a>
-        </div>
-
-        <figure class="sitios-media" id="galeria">
-          <picture>
-            <source srcset="assets/img/qxdwTzJnf_1256x620__1.jpg" type="image/webp">
-            <img src="assets/img/qxdwTzJnf_1256x620__1.jpg" alt="Fachada clásica de Buenos Aires cerca del hotel.">
-          </picture>
-        </figure>
-      </div>
-    </section>
 
     <!-- TESTIMONIOS -->
 <section class="section section-testimonials" id="testimonios">
@@ -392,179 +620,158 @@
   </div>
 
 </section>
-
-<!-- SECCIÓN UNIFICADA DE CONTACTO Y MAPA -->
-<section class="section section-contact-map" id="contacto-mapa">
-  <div class="container">
-
-    <!-- Título unificado -->
-    <div class="section-header">
-      <h2>Contacto y Ubicación</h2>
-      <!--<p>Escribinos para coordinar tu reserva o hacer una consulta. Estamos en pleno centro de la Ciudad de Buenos Aires, cerca de los principales puntos culturales.</p>-->
+<!-- SECCIÓN CONTACTO - VERSIÓN CORREGIDA -->
+<section class="section contact-section" id="contacto">
+  <!-- Fondo con imagen y overlay verde -->
+  <div class="contact-bg-overlay">
+    <div class="contact-bg-image" style="background-image: url('assets/img/A&B_Entrada-9570.jpg');"></div>
+    <div class="contact-green-overlay"></div>
+  </div>
+  
+  <div class="container contact-container">
+    
+    <!-- Título principal en blanco -->
+    <div class="contact-title-wrapper">
+      <h2 class="contact-main-title">Contactanos</h2>
     </div>
-
-    <!-- Contenedor principal para el layout -->
-    <div class="contact-map-wrapper">
+    
+    <!-- Tarjeta principal con dos columnas -->
+    <div class="contact-main-card">
       
-      <!-- Columna izquierda: Formulario y contacto -->
-      <div class="contact-column">
+      <!-- Columna izquierda: Formulario e información -->
+      <div class="contact-left-column">
+        
+        <!-- Teléfono en blanco -->
+        <div class="contact-phone-wrapper">
+          <i class="fas fa-phone phone-icon"></i>
+          <span class="contact-phone-number">011 4382-4118</span>
+        </div>
+        
+        <!-- Formulario -->
         <form class="contact-form">
           <div class="form-field">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+            <input type="text" placeholder="Nombre y Apellido" required class="form-input">
           </div>
+          
           <div class="form-field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com">
+            <input type="email" placeholder="Mail" required class="form-input">
           </div>
+          
           <div class="form-field">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Contanos en qué podemos ayudarte"></textarea>
+            <textarea placeholder="Mensaje" rows="4" required class="form-textarea"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Enviar</button>
+          
+          <button type="submit" class="submit-button">
+            <span class="submit-text">Enviar</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
         </form>
         
-        <!--
-        <div class="contact-info">
-          <img src="assets/img/gatoapoyado.svg" alt="" class="contact-cat" aria-hidden="true">
-          <h3>Hotel AyB Internacional</h3>
-          <p>Montevideo 248 – Buenos Aires, Argentina.</p>
-          
-          <p class="contact-line">
-            <img src="assets/img/phone.svg" alt="Teléfono" class="contact-icon">
-            <a href="tel:+541143849516">+54 11 4384-9516</a>
-          </p>
-          
-          <p class="contact-line">
-            <img src="assets/img/mail.svg" alt="Correo electrónico" class="contact-icon">
-            <a href="mailto:reservas@hotelayb.com.ar">reservas@hotelayb.com.ar</a>
-          </p>
-          
-          <p class="contact-tagline">Símbolos porteños, corazones abiertos.</p>
-        </div>-->
-
-      </div> <!-- ¡ESTA ES LA ETIQUETA QUE FALTABA CERRAR! -->
+        <!-- Dirección -->
+        <div class="contact-address-wrapper">
+          <i class="fas fa-map-marker-alt address-icon"></i>
+          <div class="address-content">
+            <p class="address-line">Montevideo 248, C1019ABF,</p>
+            <p class="address-line">Cdad. Autónoma de Buenos Aires</p>
+          </div>
+        </div>
+        
+        <!-- Redes sociales -->
+        <div class="contact-social-wrapper">
+          <a href="https://www.instagram.com/ayb_internacional/" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:reservas@hotelayb.com.ar" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        
+        <!-- Email -->
+        <div class="contact-email-wrapper">
+          <i class="fas fa-envelope-open-text email-icon"></i>
+          <a href="mailto:reservas@hotelayb.com.ar" class="contact-email-link">reservas@hotelayb.com.ar</a>
+        </div>
+        
+      </div> <!-- Fin columna izquierda -->
       
       <!-- Columna derecha: Mapa -->
-      <!--<div class="map-column">
-        <div class="map-header">
-          <h3>Cómo llegar</h3>
-          <p>En pleno centro de la Ciudad de Buenos Aires, cerca de los principales puntos culturales.</p>
-        </div>
-      -->
+      <div class="contact-right-column">
         <div class="map-wrapper">
-          <div class="map-embed">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.3378790065385!2d-58.391991724480405!3d-34.605990372953435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccace55555555%3A0x7c8362e771989eb3!2sHotel%20A%20y%20B%20Internacional!5e0!3m2!1ses!2sar!4v1763400884642!5m2!1ses!2sar"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.804857473102!2d-58.391958!3d-34.603738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccace55555555%3A0x7c8362e771989eb3!2sHotel%20A%20y%20B%20Internacional!5e1!3m2!1ses!2sar!4v1766056180113!5m2!1ses!2sar" 
+            class="google-map"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación del Hotel AyB Internacional">
+          </iframe>
         </div>
-      </div>
-
-    </div>
-  </div>
+      </div> <!-- Fin columna derecha -->
+      
+    </div> <!-- Fin tarjeta principal -->
+    
+  </div> <!-- Fin container -->
 </section>
-  <!-- BOTÓN WHATSAPP + CTA RESERVA -->
-  <div class="floating-cta">
-    <a href="#reservar" class="btn btn-primary">Reservar ahora</a>
-    <a
-      class="whatsapp-btn"
-      href="https://wa.me/5491139250258?text=Hola%20quiero%20reservar%20en%20Hotel%20AyB%20Internacional"
-      target="_blank" rel="noopener"
-      aria-label="Reservar por WhatsApp">
-      <img src="assets/img/whatssssss.svg" alt="" aria-hidden="true">
-    </a>
-  </div>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-top">
-      <img src="assets/img/iso_AyB_corona_blanco_1.svg" alt="Isotipo AyB Internacional" class="footer-logo">
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <!-- Logo vertical a la derecha -->
+    <img src="assets/img/logo_AyB_vertical negativo color.svg" alt="Hotel AyB Internacional" class="footer-logo-vertical">
 
-      <div class="footer-columns">
-        <div class="footer-column">
-          <h3>Nuestros Hoteles</h3>
-          <p><strong>Argentina</strong></p>
-          <ul>
-            <li><a href="https://hotelregis.com.ar" target="_blank" rel="noopener">Hotel Regis</a></li>
-            <li><a href="https://hotelelcabildo.com/" target="_blank" rel="noopener">Hotel El Cabildo</a></li>
-            <li><a href="https://reina.buenosaireshotelsargentina.com/es/" target="_blank" rel="noopener">Hotel Reina</a></li>
-            <li><a href="https://www.tritonehotel.com.ar/" target="_blank" rel="noopener">Hotel Tritone</a></li>
-          </ul>
-          <p><strong>Uruguay</strong></p>
-          <ul>
-            <li><a href="https://www.hispanohotel.com.uy/" target="_blank" rel="noopener">Hotel Hispano</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h3>Enlaces rápidos</h3>
-          <ul class="footer-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#habitaciones">Habitaciones</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#reservar">Reservar</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h3>Contacto</h3>
-          <p>Hotel AyB Internacional</p>
-          <p>Montevideo 248 – Buenos Aires, Argentina.</p>
-
-          <!-- Teléfono -->
-          <p class="footer-contact">
-            <img src="assets/img/phone.svg" alt="Teléfono" class="footer-icon">
-            <a href="tel:+541143849516">+54 11 4384 9516</a>
-          </p>
-
-          <!-- Email -->
-          <p class="footer-contact">
-            <img src="assets/img/mail.svg" alt="Correo electrónico" class="footer-icon">
-            <a href="mailto:reservas@hotelayb.com.ar">reservas@hotelayb.com.ar</a>
-          </p>
-
-          <!-- Redes sociales -->
-          <div class="footer-social">
-            <a href="https://www.facebook.com/HotelAyBInternacional/"
-               aria-label="Facebook AyB Internacional" target="_blank" rel="noopener">
-              <img src="assets/img/facebook.svg" alt="Facebook" class="footer-social-icon">
-            </a>
-
-            <a href="https://www.instagram.com/ayb_internacional/"
-               aria-label="Instagram AyB Internacional" target="_blank" rel="noopener">
-              <img src="assets/img/ig.svg" alt="Instagram" class="footer-social-icon">
-            </a>
-
-           <a href="https://www.linkedin.com/company/hotel-ayb-internacional/"
-               aria-label="linkedin AyB Internacional" target="_blank" rel="noopener">
-              <img src="assets/img/linkedin.svg" alt="Instagram" class="footer-social-icon">
-            </a>
+    <div class="footer-columns">
+      <!-- Columna de newsletter (izquierda) -->
+      <div class="footer-column newsletter-column">
+        <div class="newsletter-content">
+          <img src="assets/img/gatodurmiendonaranja.svg" alt="" class="footer-cat" aria-hidden="true">
+          <div class="newsletter-text">
+            <p>Para promociones y descuentos,<br>sumate a nuestra comunidad</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="correo electrónico" required>
+              <button type="submit" class="btn-newsletter">Enviar</button>
+            </form>
           </div>
         </div>
       </div>
 
-
-      <img src="assets/img/gatodurmiendonaranja.svg" alt="" class="footer-cat" aria-hidden="true">
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <ul class="footer-legal-links">
-          <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
-          <li><a href="politica-de-cookies.html">Política de Cookies</a></li>
-          <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
-          <li><a href="#">Libro de quejas</a></li>
+      <!-- Columna de hoteles (centro) -->
+      <div class="footer-column hoteles-column">
+        <h3>Nuestros Hoteles</h3>
+        <p><strong>Argentina</strong></p>
+        <ul>
+          <li><a href="https://hotelregis.com.ar" target="_blank" rel="noopener">Hotel Regis</a></li>
+          <li><a href="https://hotelelcabildo.com/" target="_blank" rel="noopener">Hotel El Cabildo</a></li>
+          <li><a href="https://reina.buenosaireshotelsargentina.com/es/" target="_blank" rel="noopener">Hotel Reina</a></li>
+          <li><a href="https://www.tritonehotel.com.ar/" target="_blank" rel="noopener">Hotel Tritone</a></li>
         </ul>
-        <p>© 2025 Hotel AyB Internacional | Todos los derechos reservados. Capitana MKT</p>
+        <p><strong>Uruguay</strong></p>
+        <ul>
+          <li><a href="https://www.hispanohotel.com.uy/" target="_blank" rel="noopener">Hotel Hispano</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+  </div>
+
+  <div class="footer-bottom">
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <ul class="footer-legal-links">
+        <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
+        <li><a href="politica-de-cookies.html">Política de Cookies</a></li>
+        <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+        <li><a href="#">Libro de quejas</a></li>
+      </ul>
+      <p>© 2025 Hotel AyB Internacional | Todos los derechos reservados. Capitana MKT</p>
+    </div>
+  </div>
+</footer>
 
   <!-- JS simple para menú y testimonios -->
   <script>
@@ -637,6 +844,149 @@ carousel.addEventListener("mouseleave", startAutoScroll);
   });
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+  
+  // Función para actualizar el carrusel
+  function updateCarousel() {
+    // Mover el track
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Actualizar dots
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+    
+    // Actualizar slides (agregar clase active)
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === currentSlide);
+    });
+  }
+  
+  // Evento para botón anterior
+  prevBtn.addEventListener('click', function() {
+    currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
+    updateCarousel();
+  });
+  
+  // Evento para botón siguiente
+  nextBtn.addEventListener('click', function() {
+    currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0;
+    updateCarousel();
+  });
+  
+  // Evento para dots
+  dots.forEach(dot => {
+    dot.addEventListener('click', function() {
+      currentSlide = parseInt(this.getAttribute('data-index'));
+      updateCarousel();
+    });
+  });
+  
+  // Auto avanzar cada 5 segundos (opcional)
+  /*
+  setInterval(() => {
+    currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0;
+    updateCarousel();
+  }, 5000);
+  */
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Aquí iría la lógica para enviar el formulario
+      // Por ahora, solo mostraremos un mensaje
+      
+      // Obtener los valores del formulario
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      
+      // Validación simple
+      if (nombre && email && mensaje) {
+        // Aquí normalmente enviarías los datos a un servidor
+        console.log('Formulario enviado:', { nombre, email, mensaje });
+        
+        // Mostrar mensaje de éxito
+        alert('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+        
+        // Limpiar formulario
+        contactForm.reset();
+      } else {
+        alert('Por favor, completa todos los campos.');
+      }
+    });
+  }
+});
+</script>
+
+<script>
+// Carrusel AyB - Versión mínima
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.ayb-carousel-track');
+  const slides = document.querySelectorAll('.ayb-carousel-slide');
+  const dots = document.querySelectorAll('.ayb-dot');
+  const prevBtn = document.querySelector('.ayb-arrow-prev');
+  const nextBtn = document.querySelector('.ayb-arrow-next');
+  
+  if (!track || slides.length === 0) return;
+  
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  
+  function updateCarousel() {
+    // Mover track
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+    // Actualizar slides activas
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('ayb-slide-active', index === currentIndex);
+    });
+    
+    // Actualizar puntos
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('ayb-dot-active', index === currentIndex);
+    });
+  }
+  
+  function goToSlide(index) {
+    currentIndex = (index + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+  
+  function nextSlide() { goToSlide(currentIndex + 1); }
+  function prevSlide() { goToSlide(currentIndex - 1); }
+  
+  // Event listeners
+  if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+  if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+  
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => goToSlide(index));
+  });
+  
+  // Auto-play simple (opcional)
+  // setInterval(nextSlide, 5000);
+  
+  updateCarousel(); // Inicializar
+});
+</script>
 
 </body>
 </html>
