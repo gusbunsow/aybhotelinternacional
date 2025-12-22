@@ -161,25 +161,7 @@ a:focus-visible {
       background-position: center 35% !important; /* Ajusta qué parte de la imagen se ve */
 }
 
-/* Header flotante + fijo en scroll 
-.header-card {
-  position: fixed;
-  top: 1.2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 50;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(7, 79, 77, 0.96);
-  border-radius: 999px;
-  padding: 0.55rem 0.9rem 0.55rem 0.7rem;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(8px);
-  width: calc(100% - 2.4rem);
-  max-width: 680px;
-}*/
 
 /* Header flotante + fijo en scroll */
 .header-card {
@@ -599,6 +581,7 @@ a:focus-visible {
 
 .section-header h2 {
   font-size: 1.3rem;
+  margin-top: 200px;
   margin-bottom: 0.2rem;
   color: var(--ayb-green);
 }
@@ -3236,10 +3219,10 @@ body {
   min-height: 400px;
 }
 
-/* Imagen principal */
+/* Imagen principal - VERSIÓN MÁS GRANDE */
 .nosotros-media img {
-  width: 100%;
-  height: 350px;
+  width: 400%; /* Aumentado de 300% a 400% (o más) */
+  height: 600px; /* Aumenté la altura para mantener proporción */
   display: block;
   border-radius: 26px;
   object-fit: cover;
@@ -3250,13 +3233,13 @@ body {
     0 0 30px #04847b;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -100px; /* Empuja la imagen hacia la izquierda fuera del margen */
   z-index: 1;
 }
 
 /* Imagen superpuesta */
 .nosotros-media-2 img {
-  width: 30%;
+  width: 50%;
   height: 200px;
   display: block;
   border-radius: 26px;
@@ -4710,5 +4693,244 @@ background-size: 20px 20px;
   .ayb-carousel-arrow {
     width: 36px;
     height: 36px;
+  }
+}
+
+/* WhatsApp button styles - add to the end of your CSS */
+.social-link {
+    color: white; /* Makes the icon white */
+    font-size: 1.2rem; /* Adjusts the icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Sets a fixed size */
+    height: 40px;
+    border-radius: 50%; /* Makes it a circle */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ensures the button is white even when header is green on scroll */
+.site-header.header-solid .social-link {
+    color: white;
+}
+
+/* =========================
+   BOTÓN SUITE CON JACUZZI
+   ========================= */
+.suite-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--ayb-green);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 1.8rem;
+  border-radius: 12px;
+  font-family: inherit;
+  box-shadow: 0 6px 20px rgba(5, 56, 55, 0.25);
+  transition: all 0.3s ease;
+  max-width: 320px;
+  margin-left: auto; /* Esto lo empuja a la derecha */
+  margin-right: 0;
+}
+
+/* Contenedor del icono */
+.suite-icon {
+  background: rgba(255, 255, 255, 0.15);
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+/* Texto organizado en columna */
+.suite-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Título principal */
+.suite-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+/* Subtítulo */
+.suite-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+/* =========================
+   EFECTOS HOVER
+   ========================= */
+.suite-cta-btn:hover {
+  background: #044a47; /* Verde un poco más oscuro */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(5, 56, 55, 0.35);
+}
+
+.suite-cta-btn:hover .suite-icon {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  .suite-cta-btn {
+    padding: 0.9rem 1.5rem;
+    max-width: 100%;
+    margin-left: 0; /* En móvil ocupa todo el ancho */
+    justify-content: center;
+  }
+  
+  .suite-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .suite-title {
+    font-size: 1rem;
+  }
+}
+
+/* Botón con texto BLANCO - Úsalo si el fondo de la sección es verde */
+.suite-cta-btn {
+  color: white !important; /* Texto blanco */
+}
+
+.suite-cta-btn .suite-title,
+.suite-cta-btn .suite-subtitle {
+  color: white !important;
+}
+
+/* ==============================================
+   POR QUÉ ELEGIRNOS - IMAGEN Y TARJETA EN PILA
+   ============================================== */
+
+/* 1. CONTENEDOR PRINCIPAL - Cambia a columna */
+.why-choose-container {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  min-height: auto !important;
+  gap: 2rem !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* 2. IMAGEN - Saca del posicionamiento absoluto */
+.why-choose-bg {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: 400px !important; /* Altura fija para la imagen */
+  margin: 0 !important;
+  border-radius: 26px !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+}
+
+.why-choose-bg img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 26px !important;
+}
+
+/* 3. TARJETA - La ponemos debajo */
+.why-choose-card {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  z-index: 2 !important;
+  margin: 0 auto !important; /* Centrada horizontalmente */
+}
+
+/* ==============================================
+   RESPONSIVE
+   ============================================== */
+
+@media (max-width: 992px) {
+  .why-choose-bg {
+    height: 350px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    gap: 1.5rem !important;
+  }
+  
+  .why-choose-bg {
+    height: 300px !important;
+  }
+  
+  .why-choose-card {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-choose-bg {
+    height: 600px !important;
+  }
+}
+
+/* Parche mínimo */
+.why-choose-bg {
+  margin: 0 calc(-50vw + 50%) !important;
+  width: 100vw !important;
+}
+
+/* Versión completa con responsive */
+.why-choose-bg {
+  height: 600px !important; /* Desktop */
+}
+
+.why-choose-bg img {
+  height: 600px !important;
+}
+
+@media (max-width: 992px) {
+  .why-choose-bg,
+  .why-choose-bg img {
+    height: 450px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-bg,
+  .why-choose-bg img {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-choose-bg,
+  .why-choose-bg img {
+    height: 600px !important;
   }
 }
