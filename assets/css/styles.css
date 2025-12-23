@@ -1823,7 +1823,7 @@ a:focus-visible {
 .contact-info h3 {
   margin: 0 0 0.3rem;
   font-size: 1rem;
-  color: var(--ayb-green);
+  color: transparent;
 }
 
 .contact-info p {
@@ -2134,6 +2134,64 @@ a:focus-visible {
   }
 }
 
+
+/* Fuerza distribución exacta 33% cada columna */
+.footer-top {
+  display: flex;
+  justify-content: space-around; /* Distribuye espacio alrededor */
+  align-items: flex-start;
+}
+
+.footer-logo-vertical {
+  flex: 0 0 20%; /* Ocupa 20% del ancho */
+}
+
+.footer-columns {
+  flex: 0 0 60%; /* Ocupa 60% del ancho (30% cada columna interna) */
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column.hoteles-column,
+.newsletter-column {
+  flex: 0 0 48%; /* Cada una ocupa casi la mitad del 60% */
+}
+
+/* Baja el bloque del newsletter */
+.newsletter-column {
+  flex: 1;
+  max-width: 300px;
+  order: 3;
+  margin-top: 1.5rem !important; /* Agrega espacio arriba */
+}
+
+/* Si solo quieres bajar el contenido interno (gato + formulario) */
+.newsletter-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem !important; /* Baja solo el contenido */
+}
+
+/* Para ajustar más finamente en desktop */
+@media (min-width: 993px) {
+  .newsletter-column {
+    margin-top: 2rem !important; /* Más espacio solo en desktop */
+  }
+}
+
+/* Quitar el margen en móvil para no afectar el diseño apilado */
+@media (max-width: 992px) {
+  .newsletter-column {
+    margin-top: 0 !important;
+  }
+  
+  .newsletter-content {
+    margin-top: 0 !important;
+  }
+}
+
+
 /* SVG dentro de los botoncitos circulares de redes (usas el estilo .footer-social a que ya tenés) */
 .footer-social-icon {
   width: 18px;
@@ -2187,21 +2245,7 @@ a:focus-visible {
   margin: 1.4rem auto 0;
 }
 
-.footer-bottom {
-  width: 100%;            /* → se estira a todo el viewport */
-  background: #053837;
-  margin-top: 1.8rem;
-  padding: 0.8rem 0;
-  font-size: 0.76rem;
-}
 
-/* el contenido interno ya está centrado por .container en el HTML */
-.footer-bottom-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  align-items: flex-start;
-}
 
 .footer-legal-links {
   list-style: none;
@@ -3783,7 +3827,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(4, 132, 123, 0.85); /* Overlay verde #04847b */
+  background: rgba(255, 255, 255, 0); /* Overlay verde #04847b */
   mix-blend-mode: multiply;
 }
 
@@ -4933,4 +4977,266 @@ background-size: 20px 20px;
   .why-choose-bg img {
     height: 600px !important;
   }
+}
+
+/* =========================
+   SECCIÓN EXPERIENCIAS CERCANAS - IMÁGENES GRANDES
+   ========================= */
+
+.expc-section {
+  padding: 5rem 0;
+  background: #f8f4ee;
+}
+
+.expc-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.expc-header h2 {
+  color: var(--ayb-green);
+  font-size: 2.5rem;
+}
+
+/* Grid de tarjetas - 2 columnas en desktop con imágenes grandes */
+.expc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Tarjeta individual - Contenedor más grande */
+.expc-card {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+  height: 500px; /* Altura fija grande */
+}
+
+.expc-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Enlace que cubre toda la tarjeta */
+.expc-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Contenedor de imagen - Más grande */
+.expc-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.expc-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.expc-card:hover .expc-image img {
+  transform: scale(1.1);
+}
+
+/* Overlay con información - Más visible */
+.expc-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, 
+    rgba(5, 56, 55, 0.95) 0%, 
+    rgba(5, 56, 55, 0.8) 50%,
+    transparent 100%);
+  padding: 2.5rem;
+  transform: translateY(20%);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expc-card:hover .expc-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.expc-content {
+  color: white;
+  text-align: left;
+}
+
+.expc-title {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.expc-distance {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+
+.expc-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  opacity: 0.9;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1200px) {
+  .expc-card {
+    height: 450px;
+  }
+  
+  .expc-grid {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .expc-grid {
+    grid-template-columns: 1fr; /* 1 columna en tablet/móvil */
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+  
+  .expc-card {
+    height: 400px;
+  }
+  
+  .expc-overlay {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .expc-section {
+    padding: 3rem 0;
+  }
+  
+  .expc-header h2 {
+    font-size: 2rem;
+  }
+  
+  .expc-card {
+    height: 350px;
+  }
+  
+  .expc-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .expc-grid {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .expc-card {
+    height: 300px;
+    border-radius: 20px;
+  }
+  
+  .expc-overlay {
+    padding: 1.5rem;
+  }
+  
+  .expc-title {
+    font-size: 1.3rem;
+  }
+  
+  .expc-description {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* Footer inferior - Una sola línea en desktop */
+.footer-bottom-inner {
+  display: flex;
+  flex-direction: row !important; /* Cambia a horizontal */
+  justify-content: space-between !important; /* Separa enlaces y copyright */
+  align-items: center !important; /* Centra verticalmente */
+  gap: 2rem !important; /* Espacio entre elementos */
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: nowrap !important; /* Evita saltos de línea */
+  gap: 1rem !important; /* Espacio entre enlaces */
+  margin: 0 !important;
+  white-space: nowrap !important; /* Mantiene todo en una línea */
+}
+
+.footer-bottom p {
+  white-space: nowrap !important; /* Evita que el copyright se divida */
+  margin: 0 !important;
+}
+
+/* Mantener diseño responsive para móviles */
+@media (max-width: 768px) {
+  .footer-bottom-inner {
+    flex-direction: column !important; /* Apila en móvil */
+    gap: 1rem !important;
+    align-items: flex-start !important;
+  }
+  
+  .footer-legal-links {
+    flex-wrap: wrap !important; /* Permite saltos en móvil */
+    gap: 0.75rem !important;
+  }
+}
+
+/* Footer inferior - Reducir altura */
+.footer-bottom {
+  width: 100%;
+  background: #053837;
+  margin-top: 0.5rem !important; /* Reducido de 1.8rem */
+  padding: 0.3rem 0 !important; /* Reducido de 0.8rem */
+  font-size: 0.76rem;
+  min-height: auto !important; /* Elimina cualquier min-height */
+  height: auto !important; /* Asegura altura automática */
+}
+
+.footer-bottom-inner {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 1rem !important; /* Reducido de 2rem */
+  padding: 0.2rem 0 !important; /* Reducción adicional si es necesario */
+}
+
+/* Elimina cualquier margen/padding extra en los hijos */
+.footer-legal-links {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.footer-bottom p {
+  margin: 0 !important;
+  padding: 0 !important;
 }
