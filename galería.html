@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Hotel A&B Internacional</title>
+    
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER + HERO - ESTRUCTURA CORREGIDA -->
+<header class="site-header" id="inicio">
+  
+  <!-- HEADER CARD (fuera del hero) -->
+  <div class="header-card">
+    <a href="#inicio" class="logo-link">
+      <img src="assets/img/ayblogohorizontal.svg" alt="Hotel AyB Internacional" class="logo-img">
+    </a>
+
+    <!-- Botón hamburguesa SOLO para móvil -->
+    <button class="nav-toggle" aria-controls="menu-principal" aria-expanded="false">
+      <img src="assets/img/vector-hamburguesa.svg"
+           alt="Abrir menú"
+           class="icon-menu icon-menu-open">
+      <img src="assets/img/vector-close.svg"
+           alt="Cerrar menú"
+           class="icon-menu icon-menu-close">
+      <span class="sr-only">Abrir o cerrar menú principal</span>
+    </button>
+
+    <!-- Navegación principal -->
+    <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#habitaciones">Habitaciones</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="experiencias.html">Experiencias</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+
+        <!-- Idiomas -->
+        <li class="nav-lang">
+          <a href="/index.html" class="lang active">ES</a>
+          <span class="lang-sep">·</span>
+          <a href="/en/index.html" class="lang">EN</a>
+          <span class="lang-sep">·</span>
+          <a href="/pt/index.html" class="lang">PT</a>
+        </li>
+
+        <li><a href="#reservar" class="nav-cta">Reservar</a></li>
+
+        <!-- Botón de WhatsApp NUEVO -->
+        <li class="nav-whatsapp">
+            <a href="https://wa.me/5491139250258" class="social-link">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <main>
+        <!-- SECCIÓN GALERÍA -->
+        <section class="gallery-section">
+            <div class="gallery-container">
+                
+                <!-- TÍTULO DE LA GALERÍA -->
+                <div class="gallery-title">
+                    <h1>Galería del Hotel</h1>
+                    <p>Descubre nuestros espacios a través de nuestras imágenes</p>
+                </div>
+                
+                <!-- GRID DE IMÁGENES -->
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Las imágenes se cargan con JavaScript -->
+                </div>
+                
+                <!-- LIGHTBOX (MODAL) -->
+                <div class="lightbox" id="lightbox">
+                    <div class="lightbox-content">
+                        <button class="lightbox-close" id="lightboxClose">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        
+                        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+                        
+                        <button class="lightbox-nav lightbox-next" id="lightboxNext">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="lightbox-counter" id="lightboxCounter">1 / 0</div>
+                    </div>
+                </div>
+                
+                <!-- BOTÓN REGRESAR -->
+                <div class="gallery-footer">
+                    <a href="index.html" class="btn-return-gallery">
+                        <i class="fas fa-arrow-left"></i> Regresar al inicio
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+ <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <!-- Logo vertical a la derecha -->
+    <img src="assets/img/logo_AyB_vertical negativo color.svg" alt="Hotel AyB Internacional" class="footer-logo-vertical">
+
+    <div class="footer-columns">
+      <!-- Columna de newsletter (izquierda) -->
+      <div class="footer-column newsletter-column">
+        <div class="newsletter-content">
+          <img src="assets/img/gatodurmiendonaranja.svg" alt="" class="footer-cat" aria-hidden="true">
+          <div class="newsletter-text">
+            <p>Para promociones y descuentos,<br>sumate a nuestra comunidad</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="correo electrónico" required>
+              <button type="submit" class="btn-newsletter">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna de hoteles (centro) -->
+      <div class="footer-column hoteles-column">
+        <h3>Nuestros Hoteles</h3>
+        <p><strong>Argentina</strong></p>
+        <ul>
+          <li><a href="https://hotelregis.com.ar" target="_blank" rel="noopener">Hotel Regis</a></li>
+          <li><a href="https://hotelelcabildo.com/" target="_blank" rel="noopener">Hotel El Cabildo</a></li>
+          <li><a href="https://reina.buenosaireshotelsargentina.com/es/" target="_blank" rel="noopener">Hotel Reina</a></li>
+          <li><a href="https://www.tritonehotel.com.ar/" target="_blank" rel="noopener">Hotel Tritone</a></li>
+        </ul>
+        <p><strong>Uruguay</strong></p>
+        <ul>
+          <li><a href="https://www.hispanohotel.com.uy/" target="_blank" rel="noopener">Hotel Hispano</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+
+  <div class="footer-bottom"> <!-- Solo este div -->
+  <div class="container footer-bottom-inner">
+    <ul class="footer-legal-links">
+      <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
+      <li><a href="politica-de-cookies.html">Política de Cookies</a></li>
+      <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+      <li><a href="#">Libro de quejas</a></li>
+    </ul>
+    <p>© 2025 Hotel AyB Internacional | Todos los derechos reservados. Capitana MKT</p>
+  </div>
+</div>
+</footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Lista de imágenes (solo las primeras para ejemplo)
+        const galleryImages = [
+            'assets/img/A&B_Gimnasio-9315.jpg',
+            'assets/img/A&B_Gimnasio-9317.jpg',
+            'assets/img/A&B_Gimnasio-9320.jpg',
+            'assets/img/A&B_Gimnasio-9322.jpg',
+            'assets/img/A&B_Gimnasio-9323.jpg',
+            'assets/img/A&B_Terraza1-9326.jpg',
+            'assets/img/A&B_Terraza1-9327.jpg',
+            'assets/img/A&B_Terraza1-9329.jpg',
+            'assets/img/A&B_Terraza1-9333.jpg',
+            'assets/img/A&B_Terraza1-9334.jpg',
+            'assets/img/A&B_Terraza1-9336.jpg',
+            'assets/img/A&B_Terraza1-9337.jpg',
+            'assets/img/A&B_Terraza1-9340.jpg',
+            'assets/img/A&B_Terraza1-9352.jpg',
+            'assets/img/A&B_Terraza1-9370.jpg',
+            'assets/img/A&B_Solarium-9375.jpg',
+            'assets/img/A&B_Solarium-9376.jpg',
+            'assets/img/A&B_Solarium-9379.jpg',
+            'assets/img/A&B_Solarium-9380.jpg',
+            'assets/img/A&B_Solarium-9382.jpg',
+            'assets/img/A&B_Solarium-9384.jpg',
+            'assets/img/A&B_Solarium-9386.jpg',
+            'assets/img/A&B_Solarium-9388.jpg',
+            'assets/img/A&B_Solarium-9389.jpg',
+            'assets/img/A&B_Solarium-9390.jpg',
+            'assets/img/A&B_Solarium-9394.jpg',
+            'assets/img/A&B_Solarium-9399.jpg',
+            'assets/img/A&B_Solarium-9401.jpg',
+            'assets/img/A&B_Solarium-9404.jpg',
+            'assets/img/A&B_Solarium-9405.jpg',
+            'assets/img/A&B_Solarium-9406.jpg',
+            'assets/img/A&B_Solarium-9407.jpg',
+            'assets/img/A&B_Terraza1-9338.jpg',
+            'assets/img/A&B_Terraza1-9342.jpg',
+            'assets/img/A&B_Terraza1-9343.jpg',
+            'assets/img/A&B_Terraza1-9347.jpg',
+            'assets/img/A&B_Terraza1-9353.jpg',
+            'assets/img/A&B_Terraza1-9357.jpg',
+            'assets/img/A&B_Terraza1-9359.jpg',
+            'assets/img/A&B_Terraza1-9361.jpg',
+            'assets/img/A&B_Terraza1-9364.jpg',
+            'assets/img/A&B_Terraza1-9372.jpg',
+            'assets/img/A&B_Terraza1-9409.jpg',
+            'assets/img/A&B_Terraza2-9408.jpg',
+            'assets/img/A&B_Terraza2-9413.jpg',
+            'assets/img/A&B_Terraza2-9416.jpg',
+            'assets/img/A&B_Terraza2-9417.jpg',
+            'assets/img/A&B_Terraza2-9418.jpg',
+            'assets/img/A&B_Terraza2-9419.jpg',
+            'assets/img/A&B_Terraza2-9420.jpg',
+            'assets/img/A&B_Terraza2-9423.jpg',
+            'assets/img/A&B_Terraza2-9431.jpg',
+            'assets/img/A&B_Terraza2-9434.jpg',
+            'assets/img/A&B_Terraza3-9469.jpg',
+            'assets/img/A&B_Entrada-9559.jpg',
+            'assets/img/A&B_Pasillos-9486.jpg',
+            'assets/img/A&B_Pasillos-9495.jpg',
+            'assets/img/A&B_Pasillos-9497.jpg',
+            'assets/img/A&B_Pasillos-9500.jpg',
+            'assets/img/A&B_Pasillos-9504.jpg',
+            'assets/img/A&B_Pasillos-9506.jpg',
+            'assets/img/A&B_Pasillos-9510.jpg',
+            'assets/img/A&B_Pasillos-9512.jpg',
+            'assets/img/A&B_Pasillos-9514.jpg',
+            'assets/img/A&B_Pasillos-9515.jpg',
+            'assets/img/A&B_Pasillos-9516.jpg',
+            'assets/img/A&B_Pasillos-9518.jpg',
+            'assets/img/A&B_Pasillos-9521.jpg',
+            'assets/img/A&B_Pasillos-9524.jpg',
+            'assets/img/A&B_Pasillos-9527.jpg',
+            'assets/img/A&B_Pasillos-9529.jpg',
+            'assets/img/A&B_Pasillos-9531.jpg',
+            'assets/img/A&B_Pasillos-9534.jpg',
+            'assets/img/A&B_Pasillos-9542.jpg',
+            'assets/img/A&B_Terraza2-9428.jpg',
+            'assets/img/A&B_Terraza3-9435.jpg',
+            'assets/img/A&B_Terraza3-9437.jpg',
+            'assets/img/A&B_Terraza3-9439.jpg',
+            'assets/img/A&B_Terraza3-9440.jpg',
+            'assets/img/A&B_Terraza3-9443.jpg',
+            'assets/img/A&B_Terraza3-9446.jpg',
+            'assets/img/A&B_Terraza3-9449.jpg',
+            'assets/img/A&B_Terraza3-9452.jpg',
+            'assets/img/A&B_Terraza3-9455.jpg',
+            'assets/img/A&B_Terraza3-9458.jpg',
+            'assets/img/A&B_Terraza3-9466.jpg',
+            'assets/img/A&B_Terraza3-9468.jpg',
+            'assets/img/A&B_Terraza3-9470.jpg',
+            'assets/img/A&B_Terraza3-9474.jpg',
+            'assets/img/A&B_Terraza3-9477.jpg',
+            'assets/img/A&B_Terraza3-9480.jpg',
+            'assets/img/A&B_Terraza3-9482.jpg',
+            'assets/img/A&B_Terraza3-9484.jpg',
+            'assets/img/A&B_Desayuno-1768.jpg',
+            'assets/img/A&B_Desayuno-1769.jpg',
+            'assets/img/A&B_Desayuno-1771.jpg',
+            'assets/img/A&B_Desayuno-1774.jpg',
+            'assets/img/A&B_Desayuno-1775.jpg',
+            'assets/img/A&B_Desayuno-1778.jpg',
+            'assets/img/A&B_Desayuno-1783.jpg',
+            'assets/img/A&B_Desayuno-1785.jpg',
+            'assets/img/A&B_Desayuno-1786.jpg',
+            'assets/img/A&B_Desayuno-1790.jpg',
+            'assets/img/A&B_Desayuno-1791.jpg',
+            'assets/img/A&B_Desayuno-1792.jpg',
+            'assets/img/A&B_Desayuno-1796.jpg',
+            'assets/img/A&B_Desayuno-1798.jpg',
+            'assets/img/A&B_Desayuno-1803.jpg',
+            'assets/img/A&B_Desayuno-1804.jpg',
+            'assets/img/A&B_Desayuno-1816.jpg',
+            'assets/img/A&B_Desayuno-1828.jpg',
+            'assets/img/A&B_Entrada-9558.jpg',
+            'assets/img/A&B_Entrada-9560.jpg',
+            'assets/img/A&B_Entrada-9565.jpg',
+            'assets/img/A&B_Entrada-9568.jpg',
+            'assets/img/A&B_HabTriple_1-1835.jpg',
+            'assets/img/A&B_HabTriple_1-1838.jpg',
+            'assets/img/A&B_HabTriple_1-1841.jpg',
+            'assets/img/A&B_HabTriple_1-1843.jpg',
+            'assets/img/A&B_HabTriple_1-1846.jpg',
+            'assets/img/A&B_HabTriple_1-1850.jpg',
+            'assets/img/A&B_HabTriple_1-1852.jpg',
+            'assets/img/A&B_HabTriple_1-1854.jpg',
+            'assets/img/A&B_HabTriple_1-1857.jpg',
+            'assets/img/A&B_HabTriple_1-1858.jpg',
+            'assets/img/A&B_HabTriple_1-1860.jpg',
+            'assets/img/A&B_HabTriple_1-1863.jpg',
+            'assets/img/A&B_HabTriple_1-1867.jpg',
+            'assets/img/A&B_HabTriple_1-1873.jpg',
+            'assets/img/A&B_HabTriple_2-1887.jpg',
+            'assets/img/A&B_HabTriple_2-1892.jpg',
+            'assets/img/A&B_HabTriple_2-1893.jpg',
+            'assets/img/A&B_HabTriple_2-1895.jpg',
+            'assets/img/A&B_HabTriple_2-1896.jpg',
+            'assets/img/A&B_HabTriple_2-1897.jpg',
+            'assets/img/A&B_HabTriple_2-1919.jpg',
+            'assets/img/A&B_Pasillos-9536.jpg',
+            'assets/img/A&B_Pasillos-9540.jpg',
+            'assets/img/A&B_Pasillos-9544.jpg',
+            'assets/img/A&B_Pasillos-9546.jpg',
+            'assets/img/A&B_Pasillos-9548.jpg',
+            'assets/img/A&B_Pasillos-9550.jpg',
+            'assets/img/A&B_Terraza1-1766.jpg',
+            'assets/img/A&B_Terraza3-9575.jpg',
+            'assets/img/A&B_Terraza3-9576.jpg'
+        ];
+
+        // Variables globales
+        let currentImageIndex = 0;
+        const galleryGrid = document.getElementById('galleryGrid');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        // ALGORITMO INTELIGENTE PARA EVITAR ESPACIOS VACÍOS
+        function createGallery() {
+            galleryGrid.innerHTML = '';
+            
+            let colCount = getColumnCount();
+            let itemsInCurrentRow = 0;
+            let rowIndex = 0;
+            
+            // Patrón inteligente: cada cierta cantidad de imágenes, una grande
+            // pero asegurando que no queden espacios vacíos
+            galleryImages.forEach((imgSrc, index) => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                
+                // DECISIÓN INTELIGENTE SOBRE QUÉ IMÁGENES SON GRANDES:
+                // 1. A partir de la 5ta imagen, más probabilidad de ser grande
+                // 2. Usamos un patrón que depende de la posición y del ancho de la pantalla
+                // 3. Evitamos dos grandes seguidas que puedan crear espacios
+                
+                let isLarge = false;
+                
+                // Reglas para decidir si es grande:
+                // 1. A partir de la imagen 5, considerar hacerla grande
+                if (index >= 4) {
+                    // Patrón cíclico cada 4-6 imágenes una grande
+                    // Pero también consideramos la posición en la fila
+                    if (index % 5 === 0 || index % 7 === 0) {
+                        // Solo hacerla grande si no crea un espacio vacío
+                        // Verificar que haya espacio en la fila actual
+                        if (colCount - itemsInCurrentRow >= 2) {
+                            isLarge = true;
+                        }
+                    }
+                    
+                    // Algunas imágenes específicas (como cada 10) también grandes
+                    if (index % 10 === 0 && colCount - itemsInCurrentRow >= 2) {
+                        isLarge = true;
+                    }
+                }
+                
+                // Si decidimos que es grande y hay espacio, aplicamos la clase
+                if (isLarge) {
+                    item.classList.add('large');
+                    itemsInCurrentRow += 2; // Las grandes ocupan 2 espacios
+                } else {
+                    itemsInCurrentRow += 1; // Las pequeñas ocupan 1 espacio
+                }
+                
+                // Si la fila está llena o casi llena, resetear contador
+                if (itemsInCurrentRow >= colCount) {
+                    itemsInCurrentRow = 0;
+                    rowIndex++;
+                }
+                
+                const img = document.createElement('img');
+                img.className = 'gallery-img';
+                img.src = imgSrc;
+                img.alt = `Imagen ${index + 1} del Hotel A&B Internacional`;
+                img.loading = 'lazy';
+                
+                const overlay = document.createElement('div');
+                overlay.className = 'gallery-overlay';
+                
+                const icon = document.createElement('i');
+                icon.className = 'fas fa-search-plus zoom-icon';
+                
+                overlay.appendChild(icon);
+                item.appendChild(img);
+                item.appendChild(overlay);
+                galleryGrid.appendChild(item);
+                
+                // Evento click
+                item.addEventListener('click', () => openLightbox(index));
+            });
+            
+            // Ajuste final para asegurar que no haya espacios vacíos
+            adjustLastRow();
+        }
+
+        // Obtener número de columnas según el ancho de pantalla
+        function getColumnCount() {
+            const width = window.innerWidth;
+            if (width >= 1200) return 4;
+            if (width >= 768) return 3;
+            if (width >= 480) return 2;
+            return 1;
+        }
+
+        // Ajustar la última fila para evitar espacios
+        function adjustLastRow() {
+            const items = document.querySelectorAll('.gallery-item');
+            const colCount = getColumnCount();
+            
+            // Si hay pocas imágenes, no hacer ajustes
+            if (items.length <= colCount) return;
+            
+            // Verificar la última fila
+            let lastRowItems = 0;
+            for (let i = items.length - 1; i >= 0; i--) {
+                const item = items[i];
+                if (item.classList.contains('large')) {
+                    lastRowItems += 2;
+                } else {
+                    lastRowItems += 1;
+                }
+                
+                if (lastRowItems >= colCount) {
+                    // Si la última fila está completa, no hacer nada
+                    return;
+                }
+            }
+            
+            // Si la última fila no está completa, ajustar
+            // Convertir alguna imagen pequeña en grande si es posible
+            if (lastRowItems === colCount - 1) {
+                // Solo falta un espacio, convertir última imagen en grande
+                const lastItem = items[items.length - 1];
+                if (!lastItem.classList.contains('large')) {
+                    lastItem.classList.add('large');
+                }
+            }
+        }
+
+        // Abrir lightbox
+        function openLightbox(index) {
+            currentImageIndex = index;
+            updateLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Cerrar lightbox
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Actualizar lightbox
+        function updateLightbox() {
+            lightboxImg.src = galleryImages[currentImageIndex];
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+        }
+
+        // Imagen anterior
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightbox();
+        }
+
+        // Imagen siguiente
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            updateLightbox();
+        }
+
+        // Navegación con teclado
+        function handleKeydown(e) {
+            if (!lightbox.classList.contains('active')) return;
+            
+            switch(e.key) {
+                case 'Escape': closeLightbox(); break;
+                case 'ArrowLeft': prevImage(); break;
+                case 'ArrowRight': nextImage(); break;
+            }
+        }
+
+        // Redimensionar ventana
+        function handleResize() {
+            createGallery();
+        }
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', () => {
+            createGallery();
+            
+            // Event listeners
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', prevImage);
+            lightboxNext.addEventListener('click', nextImage);
+            
+            // Cerrar al hacer clic fuera
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+            
+            // Teclado
+            document.addEventListener('keydown', handleKeydown);
+            
+            // Redimensionamiento
+            window.addEventListener('resize', handleResize);
+        });
+    </script>
+   <!-- JS simple para menú y testimonios -->
+  <script>
+    // Menú hamburguesa
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('menu-principal');
+
+    if (navToggle && nav) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open');
+      });
+    }
+
+    // Rotador de testimonios por fundido cada 3s
+    const testimonials = document.querySelectorAll('.testimonial');
+    let testimonialIndex = 0;
+
+    if (testimonials.length > 1) {
+      setInterval(() => {
+        testimonials[testimonialIndex].classList.remove('active');
+        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+        testimonials[testimonialIndex].classList.add('active');
+      }, 3000);
+    }
+  </script>
+<!--MOVIMIENTO CARROUSEL-->
+  <script>
+const carousel = document.getElementById("roomsCarousel");
+let autoScroll;
+
+function startAutoScroll() {
+  autoScroll = setInterval(() => {
+    const itemWidth = carousel.children[0].offsetWidth;
+    const gap = parseFloat(getComputedStyle(carousel).gap || 0);
+    const scrollAmount = itemWidth + gap;
+
+    // Si llegó al final, volver al inicio
+    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 5) {
+      carousel.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  }, 2000); // cada 2 segundos
+}
+
+function stopAutoScroll() {
+  clearInterval(autoScroll);
+}
+
+// Arranca el autoplay
+startAutoScroll();
+
+// Opcional: si el usuario toca o hace scroll, pausa mientras interactúa
+carousel.addEventListener("mouseenter", stopAutoScroll);
+carousel.addEventListener("mouseleave", startAutoScroll);
+</script>
+
+<script>
+  // Header verde desde el inicio
+  document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+    
+    // Añadir clase header-solid inmediatamente (sin esperar scroll)
+    header.classList.add("header-solid");
+    
+    // Opcional: si quieres que cambie al hacer scroll (ej: más oscuro)
+    document.addEventListener("scroll", function () {
+      if (window.scrollY > 40) {
+        header.classList.add("header-scrolled");
+      } else {
+        header.classList.remove("header-scrolled");
+      }
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+  
+  // Función para actualizar el carrusel
+  function updateCarousel() {
+    // Mover el track
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Actualizar dots
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+    
+    // Actualizar slides (agregar clase active)
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === currentSlide);
+    });
+  }
+  
+  // Evento para botón anterior
+  prevBtn.addEventListener('click', function() {
+    currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
+    updateCarousel();
+  });
+  
+  // Evento para botón siguiente
+  nextBtn.addEventListener('click', function() {
+    currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0;
+    updateCarousel();
+  });
+  
+  // Evento para dots
+  dots.forEach(dot => {
+    dot.addEventListener('click', function() {
+      currentSlide = parseInt(this.getAttribute('data-index'));
+      updateCarousel();
+    });
+  });
+  
+  // Auto avanzar cada 5 segundos (opcional)
+  /*
+  setInterval(() => {
+    currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0;
+    updateCarousel();
+  }, 5000);
+  */
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Aquí iría la lógica para enviar el formulario
+      // Por ahora, solo mostraremos un mensaje
+      
+      // Obtener los valores del formulario
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      
+      // Validación simple
+      if (nombre && email && mensaje) {
+        // Aquí normalmente enviarías los datos a un servidor
+        console.log('Formulario enviado:', { nombre, email, mensaje });
+        
+        // Mostrar mensaje de éxito
+        alert('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+        
+        // Limpiar formulario
+        contactForm.reset();
+      } else {
+        alert('Por favor, completa todos los campos.');
+      }
+    });
+  }
+});
+</script>
+
+<script>
+// Carrusel AyB - Versión mínima
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.ayb-carousel-track');
+  const slides = document.querySelectorAll('.ayb-carousel-slide');
+  const dots = document.querySelectorAll('.ayb-dot');
+  const prevBtn = document.querySelector('.ayb-arrow-prev');
+  const nextBtn = document.querySelector('.ayb-arrow-next');
+  
+  if (!track || slides.length === 0) return;
+  
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  
+  function updateCarousel() {
+    // Mover track
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+    // Actualizar slides activas
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('ayb-slide-active', index === currentIndex);
+    });
+    
+    // Actualizar puntos
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('ayb-dot-active', index === currentIndex);
+    });
+  }
+  
+  function goToSlide(index) {
+    currentIndex = (index + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+  
+  function nextSlide() { goToSlide(currentIndex + 1); }
+  function prevSlide() { goToSlide(currentIndex - 1); }
+  
+  // Event listeners
+  if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+  if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+  
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => goToSlide(index));
+  });
+  
+  // Auto-play simple (opcional)
+  // setInterval(nextSlide, 5000);
+  
+  updateCarousel(); // Inicializar
+});
+</script>
+</body>
+</html>

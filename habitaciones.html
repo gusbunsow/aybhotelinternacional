@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel AyB Internacional | Tradición porteña y vida cultural</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hotel AyB Internacional en San Nicolás, Buenos Aires. Tradición porteña, vida cultural y hospitalidad en un mismo lugar. Habitaciones cómodas, desayuno artesanal y anfitriones culturales.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#074F4D">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- En el <head> de tu documento HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Open Graph básico -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hotel AyB Internacional">
+  <meta property="og:description" content="Símbolos porteños, corazones abiertos.">
+  <meta property="og:image" content="https://www.hotelayb.com.ar/assets/img/suiteconjacuzzi-1-1600.jpg">
+  <meta property="og:locale" content="es_AR">
+
+  <!-- JSON-LD para bots / motores de IA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Hotel AyB Internacional",
+    "image": "https://www.hotelayb.com.ar/assets/img/suiteconjacuzzi-1-1600.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Montevideo 248",
+      "addressLocality": "Buenos Aires",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "C1019",
+      "addressCountry": "AR"
+    },
+    "telephone": "+54 11 4384 9516",
+    "email": "reservas@hotelayb.com.ar",
+    "url": "https://www.hotelayb.com.ar",
+    "description": "Tradición porteña y vida cultural en un mismo lugar. Símbolos porteños, corazones abiertos."
+  }
+  </script>
+
+  <!-- Google Analytics / gtag (reemplazar G-XXXXXXXXXX por el ID real) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+
+  <div class="corona-bg"></div>
+
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+ <!-- HEADER + HERO - ESTRUCTURA CORREGIDA -->
+<header class="site-header" id="inicio">
+  
+  <!-- HEADER CARD (fuera del hero) -->
+  <div class="header-card">
+    <a href="#inicio" class="logo-link">
+      <img src="assets/img/ayblogohorizontal.svg" alt="Hotel AyB Internacional" class="logo-img">
+    </a>
+
+    <!-- Botón hamburguesa SOLO para móvil -->
+    <button class="nav-toggle" aria-controls="menu-principal" aria-expanded="false">
+      <img src="assets/img/vector-hamburguesa.svg"
+           alt="Abrir menú"
+           class="icon-menu icon-menu-open">
+      <img src="assets/img/vector-close.svg"
+           alt="Cerrar menú"
+           class="icon-menu icon-menu-close">
+      <span class="sr-only">Abrir o cerrar menú principal</span>
+    </button>
+
+    <!-- Navegación principal -->
+    <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#habitaciones">Habitaciones</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="experiencias.html">Experiencias</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+
+        <!-- Idiomas -->
+        <li class="nav-lang">
+          <a href="/index.html" class="lang active">ES</a>
+          <span class="lang-sep">·</span>
+          <a href="/en/index.html" class="lang">EN</a>
+          <span class="lang-sep">·</span>
+          <a href="/pt/index.html" class="lang">PT</a>
+        </li>
+
+        <li><a href="#reservar" class="nav-cta">Reservar</a></li>
+
+        <!-- Botón de WhatsApp NUEVO -->
+        <li class="nav-whatsapp">
+            <a href="https://wa.me/5491139250258" class="social-link">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+
+  <!-- HERO SECTION (separado) -->
+  <div class="hero">
+    <div class="hero-media" aria-hidden="true"></div>
+
+    <div class="hero-inner container">
+      <!-- MOTOR DE RESERVAS DENTRO del hero -->
+      <section class="booking" aria-label="Motor de reservas">
+        <div class="booking-card">
+          <form action="#" method="get" class="booking-form" id="reservar">
+            <div class="booking-field">
+              <label for="checkin">Check-in</label>
+              <input type="date" id="checkin" name="checkin">
+            </div>
+            <div class="booking-field">
+              <label for="checkout">Check-out</label>
+              <input type="date" id="checkout" name="checkout">
+            </div>
+            <div class="booking-field booking-field-inline">
+              <label for="adultos">Adultos</label>
+              <input type="number" id="adultos" name="adultos" min="1" value="2">
+            </div>
+            <div class="booking-field booking-field-inline">
+              <label for="ninos">Niños</label>
+              <input type="number" id="ninos" name="ninos" min="0" value="0">
+            </div>
+            <div class="booking-actions">
+              <button type="submit" class="btn btn-primary btn-full">Reservar ahora</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</header>
+
+    <main>
+        <!-- SECCIÓN PRINCIPAL HABITACIONES -->
+        <section class="rooms-section">
+            <div class="room-container">
+                
+                <!-- 1. SUITE CON JACUZZI -->
+                <div class="room-item room-left" data-aos="fade-up">
+                    <div class="room-content">
+                        <div class="room-image">
+                            <img src="assets/img/A&B_SuiteHidromasaje_2-1.png" alt="Suite con Jacuzzi">
+                        </div>
+                        <div class="room-info">
+                            <h2 class="room-title">Suite con Jacuzzi</h2>
+                            <p class="room-description">
+                                Para quienes buscan un momento de relax con un toque de elegancia.
+                            </p>
+                            
+                            <div class="room-services">
+                                <div class="services-icons">
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-thermometer-half"></i>
+                                        </div>
+                                        <span class="service-text">Climatización frío/calor</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wifi"></i>
+                                        </div>
+                                        <span class="service-text">Wi-Fi de alta velocidad</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wine-bottle"></i>
+                                        </div>
+                                        <span class="service-text">Frigobar</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-tv"></i>
+                                        </div>
+                                        <span class="service-text">TV por cable</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                        <span class="service-text">Caja de seguridad</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="room-actions">
+                                <a href="suite-jacuzzi.html" class="btn-more">
+                                    <i class="fas fa-info-circle"></i> Más info
+                                </a>
+                                <a href="reservas.html" class="btn-reserve">
+                                    <i class="fas fa-calendar-check"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2. HABITACIÓN DOBLE -->
+                <div class="room-item room-right" data-aos="fade-up">
+                    <div class="room-content">
+                        <div class="room-image">
+                            <img src="assets/img/A&B_HabDoble_1-1.jpg" alt="Habitación Doble">
+                        </div>
+                        <div class="room-info">
+                            <h2 class="room-title">Habitación Doble</h2>
+                            <p class="room-description">
+                                Ideales para descansar después de recorrer la ciudad.
+                            </p>
+                            
+                            <div class="room-services">
+                                <div class="services-icons">
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-thermometer-half"></i>
+                                        </div>
+                                        <span class="service-text">Climatización frío/calor</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wifi"></i>
+                                        </div>
+                                        <span class="service-text">Wi-Fi de alta velocidad</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wine-bottle"></i>
+                                        </div>
+                                        <span class="service-text">Frigobar</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-tv"></i>
+                                        </div>
+                                        <span class="service-text">TV por cable</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                        <span class="service-text">Caja de seguridad</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="room-actions">
+                                <a href="habitacion-doble.html" class="btn-more">
+                                    <i class="fas fa-info-circle"></i> Más info
+                                </a>
+                                <a href="reservas.html" class="btn-reserve">
+                                    <i class="fas fa-calendar-check"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3. HABITACIÓN TRIPLE -->
+                <div class="room-item room-left" data-aos="fade-up">
+                    <div class="room-content">
+                        <div class="room-image">
+                            <img src="assets/img/A&B_HabTriple_1-1.jpg" alt="Habitación Triple">
+                        </div>
+                        <div class="room-info">
+                            <h2 class="room-title">Habitación Triple</h2>
+                            <p class="room-description">
+                                Ideal para descansar después de recorrer la ciudad.
+                            </p>
+                            
+                            <div class="room-services">
+                                <div class="services-icons">
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-thermometer-half"></i>
+                                        </div>
+                                        <span class="service-text">Climatización frío/calor</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wifi"></i>
+                                        </div>
+                                        <span class="service-text">Wi-Fi de alta velocidad</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wine-bottle"></i>
+                                        </div>
+                                        <span class="service-text">Frigobar</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-tv"></i>
+                                        </div>
+                                        <span class="service-text">TV por cable</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                        <span class="service-text">Caja de seguridad</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="room-actions">
+                                <a href="habitacion-triple.html" class="btn-more">
+                                    <i class="fas fa-info-circle"></i> Más info
+                                </a>
+                                <a href="reservas.html" class="btn-reserve">
+                                    <i class="fas fa-calendar-check"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 4. HABITACIÓN CUÁDRUPLE -->
+                <div class="room-item room-right" data-aos="fade-up">
+                    <div class="room-content">
+                        <div class="room-image">
+                            <img src="assets/img/A&B_HabCuadruple_1-1.jpeg" alt="Habitación Cuádruple">
+                        </div>
+                        <div class="room-info">
+                            <h2 class="room-title">Habitación Cuádruple</h2>
+                            <p class="room-description">
+                                Espacios amplios pensados para disfrutar en compañía.
+                            </p>
+                            
+                            <div class="room-services">
+                                <div class="services-icons">
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-thermometer-half"></i>
+                                        </div>
+                                        <span class="service-text">Climatización frío/calor</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wifi"></i>
+                                        </div>
+                                        <span class="service-text">Wi-Fi de alta velocidad</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wine-bottle"></i>
+                                        </div>
+                                        <span class="service-text">Frigobar</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-tv"></i>
+                                        </div>
+                                        <span class="service-text">TV por cable</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                        <span class="service-text">Caja de seguridad</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="room-actions">
+                                <a href="habitacion-cuadruple.html" class="btn-more">
+                                    <i class="fas fa-info-circle"></i> Más info
+                                </a>
+                                <a href="reservas.html" class="btn-reserve">
+                                    <i class="fas fa-calendar-check"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5. SUPERIOR CON HIDROMASAJE -->
+                <div class="room-item room-left" data-aos="fade-up">
+                    <div class="room-content">
+                        <div class="room-image">
+                            <img src="assets/img/A&B_SuperiorDoble_2-1.png" alt="Superior con Hidromasaje">
+                        </div>
+                        <div class="room-info">
+                            <h2 class="room-title">Superior con Hidromasaje</h2>
+                            <p class="room-description">
+                                La habitación está pensada para relajarse y disfrutar de la estadía con todas las comodidades.
+                            </p>
+                            
+                            <div class="room-services">
+                                <div class="services-icons">
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-thermometer-half"></i>
+                                        </div>
+                                        <span class="service-text">Climatización frío/calor</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wifi"></i>
+                                        </div>
+                                        <span class="service-text">Wi-Fi de alta velocidad</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-wine-bottle"></i>
+                                        </div>
+                                        <span class="service-text">Frigobar</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-tv"></i>
+                                        </div>
+                                        <span class="service-text">TV por cable</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <div class="service-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                        <span class="service-text">Caja de seguridad</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="room-actions">
+                                <a href="superior-hidromasaje.html" class="btn-more">
+                                    <i class="fas fa-info-circle"></i> Más info
+                                </a>
+                                <a href="reservas.html" class="btn-reserve">
+                                    <i class="fas fa-calendar-check"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- CONTENEDOR FINAL CON BOTÓN REGRESAR -->
+            <div class="rooms-footer" data-aos="fade-up">
+                <div class="room-container">
+                    <a href="index.html" class="btn-return">
+                        <i class="fas fa-arrow-left"></i> Regresar al inicio
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <!-- Logo vertical a la derecha -->
+    <img src="assets/img/logo_AyB_vertical negativo color.svg" alt="Hotel AyB Internacional" class="footer-logo-vertical">
+
+    <div class="footer-columns">
+      <!-- Columna de newsletter (izquierda) -->
+      <div class="footer-column newsletter-column">
+        <div class="newsletter-content">
+          <img src="assets/img/gatodurmiendonaranja.svg" alt="" class="footer-cat" aria-hidden="true">
+          <div class="newsletter-text">
+            <p>Para promociones y descuentos,<br>sumate a nuestra comunidad</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="correo electrónico" required>
+              <button type="submit" class="btn-newsletter">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna de hoteles (centro) -->
+      <div class="footer-column hoteles-column">
+        <h3>Nuestros Hoteles</h3>
+        <p><strong>Argentina</strong></p>
+        <ul>
+          <li><a href="https://hotelregis.com.ar" target="_blank" rel="noopener">Hotel Regis</a></li>
+          <li><a href="https://hotelelcabildo.com/" target="_blank" rel="noopener">Hotel El Cabildo</a></li>
+          <li><a href="https://reina.buenosaireshotelsargentina.com/es/" target="_blank" rel="noopener">Hotel Reina</a></li>
+          <li><a href="https://www.tritonehotel.com.ar/" target="_blank" rel="noopener">Hotel Tritone</a></li>
+        </ul>
+        <p><strong>Uruguay</strong></p>
+        <ul>
+          <li><a href="https://www.hispanohotel.com.uy/" target="_blank" rel="noopener">Hotel Hispano</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+
+  <div class="footer-bottom"> <!-- Solo este div -->
+  <div class="container footer-bottom-inner">
+    <ul class="footer-legal-links">
+      <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
+      <li><a href="politica-de-cookies.html">Política de Cookies</a></li>
+      <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+      <li><a href="#">Libro de quejas</a></li>
+    </ul>
+    <p>© 2025 Hotel AyB Internacional | Todos los derechos reservados. Capitana MKT</p>
+  </div>
+</div>
+</footer>
+
+  <!-- JS simple para menú y testimonios -->
+  <script>
+    // Menú hamburguesa
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('menu-principal');
+
+    if (navToggle && nav) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open');
+      });
+    }
+
+    // Rotador de testimonios por fundido cada 3s
+    const testimonials = document.querySelectorAll('.testimonial');
+    let testimonialIndex = 0;
+
+    if (testimonials.length > 1) {
+      setInterval(() => {
+        testimonials[testimonialIndex].classList.remove('active');
+        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+        testimonials[testimonialIndex].classList.add('active');
+      }, 3000);
+    }
+  </script>
+<!--MOVIMIENTO CARROUSEL-->
+  <script>
+const carousel = document.getElementById("roomsCarousel");
+let autoScroll;
+
+function startAutoScroll() {
+  autoScroll = setInterval(() => {
+    const itemWidth = carousel.children[0].offsetWidth;
+    const gap = parseFloat(getComputedStyle(carousel).gap || 0);
+    const scrollAmount = itemWidth + gap;
+
+    // Si llegó al final, volver al inicio
+    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 5) {
+      carousel.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  }, 2000); // cada 2 segundos
+}
+
+function stopAutoScroll() {
+  clearInterval(autoScroll);
+}
+
+// Arranca el autoplay
+startAutoScroll();
+
+// Opcional: si el usuario toca o hace scroll, pausa mientras interactúa
+carousel.addEventListener("mouseenter", stopAutoScroll);
+carousel.addEventListener("mouseleave", startAutoScroll);
+</script>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+
+    if (window.scrollY > 40) {
+      header.classList.add("header-solid");
+    } else {
+      header.classList.remove("header-solid");
+    }
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+  
+  // Función para actualizar el carrusel
+  function updateCarousel() {
+    // Mover el track
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Actualizar dots
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+    
+    // Actualizar slides (agregar clase active)
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === currentSlide);
+    });
+  }
+  
+  // Evento para botón anterior
+  prevBtn.addEventListener('click', function() {
+    currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
+    updateCarousel();
+  });
+  
+  // Evento para botón siguiente
+  nextBtn.addEventListener('click', function() {
+    currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0;
+    updateCarousel();
+  });
+  
+  // Evento para dots
+  dots.forEach(dot => {
+    dot.addEventListener('click', function() {
+      currentSlide = parseInt(this.getAttribute('data-index'));
+      updateCarousel();
+    });
+  });
+  
+  // Auto avanzar cada 5 segundos (opcional)
+  /*
+  setInterval(() => {
+    currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0;
+    updateCarousel();
+  }, 5000);
+  */
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Aquí iría la lógica para enviar el formulario
+      // Por ahora, solo mostraremos un mensaje
+      
+      // Obtener los valores del formulario
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      
+      // Validación simple
+      if (nombre && email && mensaje) {
+        // Aquí normalmente enviarías los datos a un servidor
+        console.log('Formulario enviado:', { nombre, email, mensaje });
+        
+        // Mostrar mensaje de éxito
+        alert('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+        
+        // Limpiar formulario
+        contactForm.reset();
+      } else {
+        alert('Por favor, completa todos los campos.');
+      }
+    });
+  }
+});
+</script>
+
+<script>
+// Carrusel AyB - Versión mínima
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.ayb-carousel-track');
+  const slides = document.querySelectorAll('.ayb-carousel-slide');
+  const dots = document.querySelectorAll('.ayb-dot');
+  const prevBtn = document.querySelector('.ayb-arrow-prev');
+  const nextBtn = document.querySelector('.ayb-arrow-next');
+  
+  if (!track || slides.length === 0) return;
+  
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  
+  function updateCarousel() {
+    // Mover track
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+    // Actualizar slides activas
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('ayb-slide-active', index === currentIndex);
+    });
+    
+    // Actualizar puntos
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('ayb-dot-active', index === currentIndex);
+    });
+  }
+  
+  function goToSlide(index) {
+    currentIndex = (index + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+  
+  function nextSlide() { goToSlide(currentIndex + 1); }
+  function prevSlide() { goToSlide(currentIndex - 1); }
+  
+  // Event listeners
+  if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+  if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+  
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => goToSlide(index));
+  });
+  
+  // Auto-play simple (opcional)
+  // setInterval(nextSlide, 5000);
+  
+  updateCarousel(); // Inicializar
+});
+</script>
+
+</body>
+</html>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    
+</body>
+</html>
